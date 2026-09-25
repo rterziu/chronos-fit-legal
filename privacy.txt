@@ -1,7 +1,7 @@
 CHRONOS FIT
 
 PRIVACY POLICY
-Last updated 25 September 2026
+Last updated 26 September 2026
 
 Shqip: privacy.sq.txt
 
@@ -11,8 +11,8 @@ WHAT THIS APP STORES
 
 Your email address, the answers you gave during setup, the workouts you
 log, your body measurements, your daily check-ins, the food and water
-you log, the supplements you tick off, and any feedback you send. That
-is all of it.
+you log, the supplements you tick off, any progress photos you add, and
+any feedback you send. That is all of it.
 
 WHAT IT DOES NOT DO
 
@@ -29,9 +29,12 @@ no other user can read your data even if they tried.
 
 HEALTH INFORMATION
 
-Body weight, measurements, soreness and pain scores are sensitive. They
-are collected only because the training features need them, and only for
-as long as you keep your account.
+Body weight, measurements, soreness and pain scores are sensitive, and
+progress photos more so. Photos are kept in a private area of the server
+that is never publicly readable, opened only through a link that expires
+after a minute, and reachable only by the account that uploaded them.
+All of it is collected because the training features need it, and only
+for as long as you keep your account.
 
 YOUR DATA IS YOURS
 
