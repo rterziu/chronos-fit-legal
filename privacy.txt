@@ -1,0 +1,77 @@
+CHRONOS FIT
+
+PRIVACY POLICY
+Last updated 25 September 2026
+
+Shqip: privacy.sq.txt
+
+========================================================================
+
+WHAT THIS APP STORES
+
+Your email address, the answers you gave during setup, the workouts you
+log, your body measurements, your daily check-ins, the food and water
+you log, the supplements you tick off, and any feedback you send. That
+is all of it.
+
+WHAT IT DOES NOT DO
+
+There is no advertising, no advertising identifier, and no third-party
+analytics. The app does not read your location, your contacts, your
+photos, or data from Apple Health. Nothing about you is sold or shared
+with anyone.
+
+WHERE IT IS STORED
+
+On your phone, and on servers operated by Supabase inside the European
+Union. Each row is locked to your account by database-level security, so
+no other user can read your data even if they tried.
+
+HEALTH INFORMATION
+
+Body weight, measurements, soreness and pain scores are sensitive. They
+are collected only because the training features need them, and only for
+as long as you keep your account.
+
+YOUR DATA IS YOURS
+
+You can export everything to a file, or delete your account and all of
+it, from the Profile screen. Deletion is immediate and cannot be undone.
+
+QUESTIONS
+
+Use the feedback option in Profile and the message reaches the developer
+directly.
+
+========================================================================
+
+TERMS OF USE
+
+THIS IS NOT MEDICAL ADVICE
+
+Chronos Fit is a training and nutrition tool. It does not diagnose,
+treat, or give medical advice, and it is not a substitute for a doctor
+or a physiotherapist. The pain features adjust your training and tell
+you to seek a professional; they never tell you what is wrong.
+
+TRAINING CARRIES RISK
+
+You train at your own risk. Speak to a qualified professional before
+starting, especially if you have an injury, pain, or a health condition.
+Stop if something hurts.
+
+YOUR ACCOUNT
+
+Keep your password to yourself. You are responsible for what happens
+under your account.
+
+EARLY SOFTWARE
+
+This app is in active development. Features will change, and while your
+logged workouts are saved both on your phone and on the server, no
+software is immune to loss.
+
+NO WARRANTY
+
+The app is provided as it is, without guarantees that it will be
+uninterrupted, error-free, or that its recommendations will suit you.

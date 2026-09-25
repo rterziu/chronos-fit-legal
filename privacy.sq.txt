@@ -1,0 +1,79 @@
+CHRONOS FIT
+
+POLITIKA E PRIVATËSISË
+Përditësuar më 25 shtator 2026
+
+English: privacy.txt
+
+========================================================================
+
+ÇKA RUAN KY APLIKACION
+
+Adresën tënde të email-it, përgjigjet që dhe gjatë konfigurimit,
+stërvitjet që regjistron, matjet e trupit, check-in-et ditore, ushqimin
+dhe ujin që regjistron, suplementet që shënon, dhe çdo koment që dërgon.
+Kaq është e tëra.
+
+ÇKA NUK BËN
+
+Nuk ka reklama, nuk ka identifikues reklamash, dhe nuk ka analitikë të
+palëve të treta. Aplikacioni nuk lexon vendndodhjen, kontaktet, fotot,
+as të dhënat nga Apple Health. Asgjë për ty nuk shitet dhe nuk ndahet me
+askënd.
+
+KU RUHEN
+
+Në telefonin tënd, dhe në serverë të operuar nga Supabase brenda
+Bashkimit Evropian. Çdo rresht është i lidhur me llogarinë tënde nga
+siguria në nivel databaze, prandaj asnjë përdorues tjetër nuk mund t'i
+lexojë edhe sikur të provonte.
+
+TË DHËNAT SHËNDETËSORE
+
+Pesha, matjet, dhimbja e muskujve dhe e nyjeve janë të ndjeshme.
+Mblidhen vetëm sepse funksionet e stërvitjes kanë nevojë për to, dhe
+vetëm sa kohë e mban llogarinë.
+
+TË DHËNAT JANË TUAJAT
+
+Mund t'i eksportosh të gjitha në një skedar, ose ta fshish llogarinë me
+gjithçka brenda, nga ekrani i Profilit. Fshirja është e menjëhershme dhe
+nuk kthehet.
+
+PYETJE
+
+Përdor opsionin e komenteve te Profili dhe mesazhi i vjen direkt
+zhvilluesit.
+
+========================================================================
+
+KUSHTET E PËRDORIMIT
+
+KY NUK ËSHTË KËSHILLË MJEKËSORE
+
+Chronos Fit është mjet stërvitjeje dhe ushqimi. Nuk diagnostikon, nuk
+mjekon dhe nuk jep këshilla mjekësore, dhe nuk zëvendëson mjekun apo
+fizioterapeutin. Funksionet e dhimbjes e përshtatin stërvitjen dhe të
+thonë të shkosh te një profesionist; kurrë nuk të thonë çka ke.
+
+STËRVITJA KA RREZIK
+
+Stërvitesh me përgjegjësinë tënde. Konsultohu me një profesionist të
+kualifikuar para se të fillosh, sidomos nëse ke lëndim, dhimbje ose
+gjendje shëndetësore. Ndalo nëse diçka të dhemb.
+
+LLOGARIA JOTE
+
+Mbaje fjalëkalimin për vete. Je përgjegjës për çka ndodh nën llogarinë
+tënde.
+
+SOFTUER NË ZHVILLIM
+
+Ky aplikacion është në zhvillim aktiv. Funksionet do të ndryshojnë, dhe
+megjithëse stërvitjet ruhen si në telefon ashtu edhe në server, asnjë
+softuer nuk është i imun ndaj humbjes.
+
+PA GARANCI
+
+Aplikacioni ofrohet ashtu siç është, pa garanci se do të punojë pa
+ndërprerje, pa gabime, ose se rekomandimet e tij do të të përshtaten.
