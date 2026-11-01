@@ -556,3 +556,10 @@ svg { display: block; }
   .compare-wrap { padding: 0 var(--space-3) var(--space-3); }
   .compare thead th:not(:first-child), .compare td { width: 46px; padding-inline: 2px; }
 }
+
+/* Who to call on Chronos POS's price list. */
+.contact-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5); margin-top: var(--space-5); padding: clamp(20px, 3vw, 32px); border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--bg-raised); }
+.contact-card h3 { font-size: 1.1875rem; font-weight: 620; letter-spacing: -0.02em; }
+.contact-card p { margin-top: var(--space-2); color: var(--text-2); font-size: 0.9375rem; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); min-width: 0; }
+.contact-actions .btn { max-width: 100%; overflow-wrap: anywhere; }
