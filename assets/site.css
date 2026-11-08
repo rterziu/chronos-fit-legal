@@ -563,3 +563,14 @@ svg { display: block; }
 .contact-card p { margin-top: var(--space-2); color: var(--text-2); font-size: 0.9375rem; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); min-width: 0; }
 .contact-actions .btn { max-width: 100%; overflow-wrap: anywhere; }
+
+/* The Chronos POS film */
+.film-row { display: grid; grid-template-columns: 1fr minmax(240px, 340px); gap: var(--space-8); align-items: center; padding: clamp(28px, 4.5vw, 56px); border-radius: var(--r-xl); border: 1px solid var(--line);
+  background: radial-gradient(60% 70% at 85% 50%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%), var(--bg-raised); }
+.film-row h2 { margin-top: var(--space-3); font-size: var(--text-h3); line-height: 1.08; letter-spacing: -0.035em; font-weight: 650; text-wrap: balance; }
+.film-text { margin-top: var(--space-4); max-width: 44ch; color: var(--text-2); font-size: var(--text-lg); }
+.film video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 22px; background: #000; box-shadow: var(--shadow-window); }
+@media (max-width: 960px) {
+  .film-row { grid-template-columns: 1fr; gap: var(--space-6); }
+  .film { max-width: 360px; }
+}
