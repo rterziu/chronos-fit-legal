@@ -3,9 +3,14 @@
   'use strict';
 
   var root = document.documentElement;
+  // The tabs, the stacked screens and the header's download button are only hidden once this file has run,
+  // so if it never arrives every screen and panel is still on the page.
+  root.classList.add('pos-js');
+
   var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var canObserve = 'IntersectionObserver' in window;
   var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
+  var inOrder = function (a, b) { return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1; };
 
   /* How far down the page: a gold line under the header. */
   var nav = document.querySelector('.nav');
@@ -24,19 +29,38 @@
     measure();
   }
 
+  /* The phone menu closes when focus leaves it, so focus never lands behind the open panel. */
+  var menu = document.querySelector('.menu');
+  if (menu) {
+    menu.addEventListener('focusout', function (event) {
+      if (menu.open && event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false;
+    });
+  }
+
   /* The page's own navigation: the part on screen, and the download button once the hero's has gone. */
   var subnav = document.querySelector('.subnav');
   if (subnav && !canObserve) subnav.classList.add('show-cta');
   if (subnav && canObserve) {
     var row = subnav.querySelector('.subnav-links');
     var links = row ? Array.prototype.slice.call(row.querySelectorAll('a[href^="#"]')) : [];
-    var sections = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
-    var showing = {};
+    var linkTo = function (id) {
+      for (var i = 0; i < links.length; i++) if (links[i].getAttribute('href') === '#' + id) return links[i];
+      return null;
+    };
+    // Each section that has a link, plus the two without one, which belong to the part before them.
+    var parts = links.map(function (a) { return { el: document.getElementById(a.getAttribute('href').slice(1)), link: a }; });
+    var needs = document.getElementById('needs');
+    var closing = document.querySelector('.closing');
+    if (needs && linkTo('prices')) parts.push({ el: needs, link: linkTo('prices') });
+    if (closing && linkTo('questions')) parts.push({ el: closing, link: linkTo('questions') });
+    parts = parts.filter(function (p) { return p.el; }).sort(function (a, b) { return inOrder(a.el, b.el); });
+
+    var showing = [];
     var current = null;
     var mark = function () {
       var next = null;
-      for (var i = 0; i < sections.length; i++) {
-        if (sections[i] && showing[sections[i].id]) { next = links[i]; break; }
+      for (var i = 0; i < parts.length; i++) {
+        if (showing.indexOf(parts[i].el) !== -1) { next = parts[i].link; break; }
       }
       if (next === current) return;
       current = next;
@@ -53,16 +77,22 @@
       }
     };
     var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) { showing[entry.target.id] = entry.isIntersecting; });
+      entries.forEach(function (entry) {
+        var at = showing.indexOf(entry.target);
+        if (entry.isIntersecting && at === -1) showing.push(entry.target);
+        if (!entry.isIntersecting && at !== -1) showing.splice(at, 1);
+      });
       mark();
     }, { rootMargin: '-35% 0px -60% 0px' });
-    sections.forEach(function (section) { if (section) spy.observe(section); });
+    parts.forEach(function (p) { spy.observe(p.el); });
 
     var heroActions = document.querySelector('.pos-hero .actions');
     if (heroActions) {
+      // The button shows once the hero's buttons have gone up under the header, and hides when they come back.
       new IntersectionObserver(function (entries) {
-        var entry = entries[0];
-        subnav.classList.toggle('show-cta', !entry.isIntersecting && entry.boundingClientRect.top < 0);
+        var entry = entries[entries.length - 1];
+        var edge = entry.rootBounds ? entry.rootBounds.top : 0;
+        subnav.classList.toggle('show-cta', !entry.isIntersecting && entry.boundingClientRect.bottom <= edge + 1);
       }, { rootMargin: '-116px 0px 0px 0px' }).observe(heroActions);
     } else {
       subnav.classList.add('show-cta');
@@ -75,7 +105,9 @@
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     return parts.join('.');
   };
+  var decimalsOf = function (el) { return parseInt(el.getAttribute('data-decimals') || '0', 10); };
   var counters = document.querySelectorAll('[data-count]');
+  var settle = function (el) { el.textContent = format(parseFloat(el.getAttribute('data-count')), decimalsOf(el)); };
   if (counters.length && canObserve && !reduce) {
     var counter = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -83,22 +115,28 @@
         counter.unobserve(entry.target);
         var el = entry.target;
         var target = parseFloat(el.getAttribute('data-count'));
-        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var decimals = decimalsOf(el);
         var wait = parseInt(el.getAttribute('data-delay') || '0', 10);
+        var done = false;
+        var finish = function () { done = true; settle(el); };
         window.setTimeout(function () {
           var start = null;
           var tick = function (now) {
+            if (done) return;
             if (start === null) start = now;
             var k = Math.min(1, (now - start) / 1600);
+            if (k >= 1) { finish(); return; }
             el.textContent = format(target * (1 - Math.pow(1 - k, 4)), decimals);
-            if (k < 1) window.requestAnimationFrame(tick);
+            window.requestAnimationFrame(tick);
           };
           window.requestAnimationFrame(tick);
         }, wait);
+        // Where frames are not drawn (a background tab, some renderers) the figure still arrives.
+        window.setTimeout(finish, wait + 2200);
       });
     }, { threshold: 0.5 });
     each(counters, function (el) {
-      el.textContent = format(0, parseInt(el.getAttribute('data-decimals') || '0', 10));
+      el.textContent = format(0, decimalsOf(el));
       counter.observe(el);
     });
   }
@@ -120,13 +158,21 @@
     var tablist = showcase.querySelector('[role="tablist"]');
     var tabs = Array.prototype.slice.call(showcase.querySelectorAll('[role="tab"]'));
     var thumb = showcase.querySelector('.tab-thumb');
+
+    // Without this script the panels are plain sections; with it they become the tabs' panels.
+    each(showcase.querySelectorAll('.showcase-panel[data-tab]'), function (panel) {
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', panel.getAttribute('data-tab'));
+      panel.tabIndex = 0;
+    });
+
     var place = function () {
-      var tab = tablist.querySelector('[aria-selected="true"]');
+      var tab = tablist && tablist.querySelector('[aria-selected="true"]');
       if (!thumb || !tab || !tab.offsetWidth) return;
       thumb.style.width = tab.offsetWidth + 'px';
-      thumb.style.transform = 'translate(' + tab.offsetLeft + 'px, ' + (tab.offsetTop - thumb.offsetTop) + 'px)';
       thumb.style.height = tab.offsetHeight + 'px';
       thumb.style.bottom = 'auto';
+      thumb.style.transform = 'translate(' + tab.offsetLeft + 'px, ' + (tab.offsetTop - thumb.offsetTop) + 'px)';
       if (!tablist.classList.contains('has-thumb')) {
         tablist.classList.add('has-thumb');
         window.requestAnimationFrame(function () { thumb.classList.add('ready'); });
@@ -161,10 +207,12 @@
         if (next) { event.preventDefault(); select(next, true); }
       });
     });
-    place();
-    if ('ResizeObserver' in window) new ResizeObserver(place).observe(tablist);
-    else window.addEventListener('resize', place);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
+    if (tablist) {
+      place();
+      if ('ResizeObserver' in window) new ResizeObserver(place).observe(tablist);
+      else window.addEventListener('resize', place);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
+    }
 
     each(showcase.querySelectorAll('.screen-picker'), function (picker) {
       var buttons = picker.querySelectorAll('button');
@@ -176,7 +224,24 @@
         });
       });
     });
+
+    // Screens in the closed tabs load once the showcase is near, so a tab opens on a picture, not an empty frame.
+    var loadAll = function () { each(showcase.querySelectorAll('img[loading="lazy"]'), function (img) { img.loading = 'eager'; }); };
+    if (canObserve) {
+      var near = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { near.disconnect(); loadAll(); }
+      }, { rootMargin: '600px 0px' });
+      near.observe(showcase);
+    } else {
+      loadAll();
+    }
   }
+
+  /* On paper: every picture loaded and every figure final. */
+  window.addEventListener('beforeprint', function () {
+    each(document.querySelectorAll('img[loading="lazy"]'), function (img) { img.loading = 'eager'; });
+    each(counters, settle);
+  });
 
   /* A soft light that follows the pointer across cards, where there is a pointer. */
   if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {

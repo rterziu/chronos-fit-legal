@@ -12,7 +12,11 @@
     <meta property="og:title" content="Chronos POS — The till and the books in one program" />
     <meta property="og:description" content="Chronos POS is point-of-sale software for businesses in Kosovo, designed for fiscalization, with accounting, declarations and payroll in the same program. Demo for Windows. Not yet certified by the Tax Administration of Kosovo." />
     <meta property="og:url" content="https://chronosapplications.com/pos.html" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://chronosapplications.com/assets/pos/en-sale.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content="The sale screen of Chronos POS: articles in the middle, the basket and the amount to pay on the right." />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="./favicon.ico" sizes="32x32" />
     <link rel="icon" href="./assets/brand/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png" />
@@ -53,7 +57,7 @@
       </div>
         <div class="subnav">
           <div class="container subnav-in">
-            <a class="subnav-title" href="#top">Chronos POS</a>
+            <a class="subnav-title" href="#main">Chronos POS</a>
             <nav class="subnav-links" aria-label="On this page">
               <a href="#features">Features</a>
               <a href="#screens">Screens</a>
@@ -105,9 +109,9 @@
                 <div class="float-legend"><span>Cash</span><span>Card</span><span>Voucher</span></div>
               </div>
               <div class="float float-vat" aria-hidden="true">
-                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><b>By VAT rate</b></div>
-                <div class="float-row"><span>VAT 18%</span><b>1,032.40€</b></div>
-                <div class="float-row"><span>VAT 8%</span><b>252.20€</b></div>
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><b>Sales by VAT rate</b></div>
+                <div class="float-row"><span>At 18%</span><b>1,032.40€</b></div>
+                <div class="float-row"><span>At 8%</span><b>252.20€</b></div>
               </div>
             </div>
             <figcaption class="hero-note">Demo mode · practice data</figcaption>
@@ -166,7 +170,7 @@
         </div>
       </section>
 
-      <section class="section" id="features">
+      <section class="section" id="features" style="padding-top: 0">
         <div class="container">
           <div class="head" data-reveal>
             <p class="label">What it does</p>
@@ -239,37 +243,38 @@
           </div>
           <div class="showcase" data-showcase data-reveal>
             <div class="showcase-bar"><div class="showcase-tabs" role="tablist" aria-label="Parts of the program"><span class="tab-thumb" aria-hidden="true"></span><button type="button" role="tab" id="tab-sales" aria-controls="panel-sales" aria-selected="true" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 6.5h8v3.5H8z"/><path d="M8.6 14h.01M12 14h.01M15.4 14h.01M8.6 17.5h.01M12 17.5h.01M15.4 17.5h.01"/></svg><span>POS & Sales</span></button><button type="button" role="tab" id="tab-books" aria-controls="panel-books" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M9 9v10.5M14.5 9v10.5"/></svg><span>Accounting & Purchases</span></button><button type="button" role="tab" id="tab-payroll" aria-controls="panel-payroll" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v.01M18 14.5v.01"/></svg><span>Payroll & Fixed Assets</span></button></div></div>
-            <div class="showcase-panel is-active" role="tabpanel" id="panel-sales" aria-labelledby="tab-sales">
+            <div class="showcase-panel is-active" id="panel-sales" data-tab="tab-sales">
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-sale.png" width="1280" height="800" loading="lazy" alt="The sale: search, tap and pay." /></div><figcaption>The sale: search, tap and pay.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-coupon.png" width="1280" height="800" loading="lazy" alt="The coupon, marked as a demo. On a real one that line is gone." /></div><figcaption>The coupon, marked as a demo. On a real one that line is gone.</figcaption></figure></div>
+                <div class="screen-picker" role="group" aria-label="Screens"><button type="button" aria-pressed="true" aria-label="The sale: search, tap and pay."><img src="./assets/pos/en-sale.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="The coupon, marked as a demo. On a real one that line is gone."><img src="./assets/pos/en-coupon.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
+              </div>
               <div class="showcase-copy">
                 <h3>Sell, then print the coupon.</h3>
                 <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Search by name or barcode, with best sellers one tap away.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Cash, card and voucher together in one sale.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The coupon with its QR code, on 58 or 80 mm rolls.</span></li></ul>
                 <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               </div>
-              <div class="showcase-media">
-                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-sale.png" width="1280" height="800" loading="lazy" alt="The sale: search, tap and pay." /></div><figcaption>The sale: search, tap and pay.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-coupon.png" width="1280" height="800" loading="lazy" alt="The coupon, marked as a demo. On a real one that line is gone." /></div><figcaption>The coupon, marked as a demo. On a real one that line is gone.</figcaption></figure></div>
-                <div class="screen-picker" role="group" aria-label="Screens"><button type="button" aria-pressed="true" aria-label="The sale: search, tap and pay."><img src="./assets/pos/en-sale.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="The coupon, marked as a demo. On a real one that line is gone."><img src="./assets/pos/en-coupon.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
-              </div>
             </div>
-            <div class="showcase-panel" role="tabpanel" id="panel-books" aria-labelledby="tab-books">
-              <div class="showcase-copy">
-                <h3>Close the month from the same place.</h3>
-                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Six steps, from the coupons sent to the forms filed.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Purchases split into investments, expenses and goods.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The books saved as ATK’s Excel, ready for EDI.</span></li></ul>
-                <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              </div>
+            <div class="showcase-panel" id="panel-books" data-tab="tab-books">
               <div class="showcase-media">
                 <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-closing.png" width="1280" height="800" loading="lazy" alt="The month’s closing, step by step." /></div><figcaption>The month’s closing, step by step.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-purchases.png" width="1280" height="800" loading="lazy" alt="Purchases, split into investments, expenses and goods." /></div><figcaption>Purchases, split into investments, expenses and goods.</figcaption></figure></div>
                 <div class="screen-picker" role="group" aria-label="Screens"><button type="button" aria-pressed="true" aria-label="The month’s closing, step by step."><img src="./assets/pos/en-closing.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="Purchases, split into investments, expenses and goods."><img src="./assets/pos/en-purchases.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
               </div>
+              <div class="showcase-copy">
+                <h3>Close the month from the same place.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Six steps, from checking the coupons were sent to marking the forms as filed.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Purchases split into investments, expenses and goods.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The books saved as ATK’s Excel, ready for EDI.</span></li></ul>
+                <p class="showcase-note">Purchases and the books come with Chronos Plus, the month’s closing with Chronos Pro.</p>
+                <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
             </div>
-            <div class="showcase-panel" role="tabpanel" id="panel-payroll" aria-labelledby="tab-payroll">
+            <div class="showcase-panel" id="panel-payroll" data-tab="tab-payroll">
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-payroll.png" width="1280" height="800" loading="lazy" alt="The month’s payroll, from draft to paid." /></div><figcaption>The month’s payroll, from draft to paid.</figcaption></figure></div>
+              </div>
               <div class="showcase-copy">
                 <h3>Pay people, and keep the register.</h3>
                 <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Type the net pay and the gross is worked out.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Payslips in Excel, feeding WM and CM.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>An asset register with depreciation for the books and for tax.</span></li></ul>
                 <p class="showcase-note">Payroll and the asset register come with Chronos Pro.</p>
                 <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              </div>
-              <div class="showcase-media">
-                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-payroll.png" width="1280" height="800" loading="lazy" alt="The month’s payroll, from draft to paid." /></div><figcaption>The month’s payroll, from draft to paid.</figcaption></figure></div>
               </div>
             </div>
           </div>
@@ -302,7 +307,7 @@
             <h2>One licence for each till.</h2>
             <p>Licences will be issued once Chronos POS is certified. This is how they will work.</p>
           </div>
-            <figure class="shot licence-shot" data-reveal style="--i: 1"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-license.png" width="1280" height="800" loading="lazy" alt="The licence: the till’s code, and the field for yours." /></div><figcaption>The licence: the till’s code, and the field for yours.</figcaption></figure>
+            <figure class="shot licence-shot" data-reveal style="--i: 1"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-license.png" width="1280" height="800" loading="lazy" alt="The licence: the till’s code, and the field for yours." /></div><figcaption>The licence: the till’s code, and the field for yours.</figcaption><p class="caption">In demo mode, with practice data.</p></figure>
           </div>
           <div class="features" data-reveal data-stagger>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><h3>Try it first</h3><p>Demo and Test run for 30 days on a computer with no licence. Production needs one from the first coupon.</p></div>
