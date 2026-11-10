@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png" />
     <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./assets/sora-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <script>(function (d) { d.classList.add('js'); try { if (!sessionStorage.getItem('chronos-intro') && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) { sessionStorage.setItem('chronos-intro', '1'); d.classList.add('intro-play'); setTimeout(function () { d.classList.remove('intro-play'); }, 5000); } } catch (e) {} })(document.documentElement);</script>
+    <script>(function (d) { d.classList.add('js'); try { if (!sessionStorage.getItem('chronos-intro') && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) { sessionStorage.setItem('chronos-intro', '1'); d.classList.add('intro-play'); setTimeout(function () { if (!d.classList.contains('ui-js')) d.classList.remove('intro-play'); }, 2900); } } catch (e) {} })(document.documentElement);</script>
     <link rel="alternate" hreflang="en" href="https://chronosapplications.com/pos.html" />
     <link rel="alternate" hreflang="sq" href="https://chronosapplications.com/pos.sq.html" />
     <link rel="alternate" hreflang="x-default" href="https://chronosapplications.com/pos.html" />
@@ -56,7 +56,7 @@
         <g clip-path="url(#chi-clip)"><rect class="il-shine" x="-5.56" y="-14.88" width="170" height="129.48" fill="url(#chi-shine-g)"/></g>
         </svg>
         <span class="intro-line"></span>
-        <p class="intro-tag">Softuer i fokusuar. I ndërtuar me kujdes.</p>
+        <p class="intro-tag">Softuer i fokusuar. I&nbsp;ndërtuar me kujdes.</p>
       </div>
     </div>
     <a class="skip" href="#main">Kalo te përmbajtja</a>

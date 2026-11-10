@@ -30,29 +30,40 @@
       leaving = true;
       var logo = intro.querySelector('.intro-logo');
       var target = document.querySelector('.nav .brand img');
+      // Skipped early, the drawing completes at once, so the logo that flies is always the whole logo.
+      if (intro.getAnimations) {
+        intro.getAnimations({ subtree: true }).forEach(function (a) {
+          if (a.animationName && a.animationName.indexOf('il-') === 0 && a.animationName !== 'il-out') { try { a.finish(); } catch (e) {} }
+        });
+      }
       intro.classList.add('is-leaving');
+      var flying = false;
       if (logo && target) {
         var from = logo.getBoundingClientRect();
         var to = target.getBoundingClientRect();
         if (from.width && to.width) {
-          var scale = to.width / from.width;
-          logo.style.transform = 'translate(' + (to.left - from.left) + 'px, ' + (to.top - from.top) + 'px) scale(' + scale + ')';
-          logo.style.opacity = '0';
+          // The header's own logo waits hidden until the flying one lands exactly on it, then they swap.
+          flying = true;
+          root.classList.add('intro-flying');
+          logo.style.transform = 'translate(' + (to.left - from.left) + 'px, ' + (to.top - from.top) + 'px) scale(' + (to.width / from.width) + ')';
         }
       }
       // The hero starts coming in while the logo is still on its way.
       window.setTimeout(function () { root.classList.remove('intro-play'); }, 260);
-      window.setTimeout(finishIntro, 900);
+      window.setTimeout(function () { root.classList.remove('intro-flying'); finishIntro(); }, flying ? 770 : 400);
     };
     var skip = function () { leave(); };
     intro.addEventListener('click', skip);
     window.addEventListener('keydown', skip, { once: true });
     window.addEventListener('wheel', skip, { once: true, passive: true });
     window.addEventListener('touchstart', skip, { once: true, passive: true });
+    // The exit follows the drawing's own clock, so it is on time even if this file arrives late.
     var shine = intro.querySelector('.il-shine');
-    if (shine) shine.addEventListener('animationend', function () { window.setTimeout(leave, 80); });
+    var drawing = shine && shine.getAnimations ? shine.getAnimations()[0] : null;
+    if (drawing && drawing.finished) drawing.finished.then(function () { window.setTimeout(leave, 80); }, function () {});
+    else if (shine) shine.addEventListener('animationend', function () { window.setTimeout(leave, 80); });
     // If the drawing never reports back, the intro still ends.
-    window.setTimeout(leave, 2100);
+    window.setTimeout(leave, 2600);
   } else if (intro) {
     intro.parentNode.removeChild(intro);
     intro = null;

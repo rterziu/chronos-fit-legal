@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png" />
     <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./assets/sora-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <script>(function (d) { d.classList.add('js'); try { if (!sessionStorage.getItem('chronos-intro') && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) { sessionStorage.setItem('chronos-intro', '1'); d.classList.add('intro-play'); setTimeout(function () { d.classList.remove('intro-play'); }, 5000); } } catch (e) {} })(document.documentElement);</script>
+    <script>(function (d) { d.classList.add('js'); try { if (!sessionStorage.getItem('chronos-intro') && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) { sessionStorage.setItem('chronos-intro', '1'); d.classList.add('intro-play'); setTimeout(function () { if (!d.classList.contains('ui-js')) d.classList.remove('intro-play'); }, 2900); } } catch (e) {} })(document.documentElement);</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Chronos Applications","url":"https://chronosapplications.com/","slogan":"Focused software. Thoughtfully built.","description":"Chronos Applications builds focused software: Chronos POS for point of sale in Kosovo, Chronos Fit for training and nutrition, and Chronos Timesheet for time tracking in professional firms."}</script>
     <link rel="alternate" hreflang="en" href="https://chronosapplications.com/" />
     <link rel="alternate" hreflang="sq" href="https://chronosapplications.com/index.sq.html" />
