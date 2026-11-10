@@ -1,22 +1,8 @@
-/* Chronos POS's page. Loaded after site.css on pos.html and pos.sq.html only, so nothing here can move another page. */
+/* Chronos POS's own page. Loaded after site.css and ui.css on pos.html and pos.sq.html only. */
 
-.pos-page {
-  --card: linear-gradient(180deg, rgba(238, 233, 223, 0.045), rgba(238, 233, 223, 0.012));
-  --card-line: rgba(238, 233, 223, 0.1);
-  --card-line-hover: rgba(238, 233, 223, 0.22);
-  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 24px 48px -30px rgba(0, 0, 0, 0.7);
-  --gold-tint: rgba(214, 168, 78, 0.13);
-  --gold-edge: rgba(214, 168, 78, 0.42);
-  --lift: rgba(86, 120, 180, 0.3);
-  --spring: cubic-bezier(0.22, 1, 0.36, 1);
-  interpolate-size: allow-keywords;
-}
 html { scroll-padding-top: 132px; }
 
-/* Header: the site's bar, the page's own row under it, and how far down the page you are */
-.pos-page .nav { transition: background var(--t) var(--ease), border-color var(--t) var(--ease), box-shadow var(--t) var(--ease); }
-.pos-page .nav.scrolled { box-shadow: 0 18px 40px -26px rgba(0, 0, 0, 0.95); }
-.pos-page .menu-panel { z-index: 3; }
+/* The page's own row under the site's header */
 .subnav { border-top: 1px solid var(--line); }
 .subnav-in { display: flex; align-items: center; gap: var(--space-5); height: 48px; }
 .subnav-title { flex: none; display: inline-flex; align-items: center; min-height: 44px; font: 600 0.9375rem/1 var(--display); letter-spacing: -0.01em; color: var(--text); }
@@ -30,20 +16,6 @@ html { scroll-padding-top: 132px; }
 .nav .subnav-cta { flex: none; margin-left: var(--space-2); }
 .js .subnav-cta { opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity 0.3s var(--ease), transform 0.45s var(--spring), visibility 0s 0.45s; }
 .js .subnav.show-cta .subnav-cta { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
-.read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--gold-deep), var(--gold)); transform: scaleX(var(--progress, 0)); transform-origin: 0 50%; opacity: 0; pointer-events: none; transition: opacity var(--t) var(--ease); }
-.nav.scrolled .read-progress { opacity: 1; }
-
-/* Buttons */
-.pos-page .btn { transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast), transform 0.35s var(--spring), box-shadow 0.35s var(--spring); }
-.pos-page .btn:hover { transform: translateY(-1px); }
-.pos-page .btn:active { transform: translateY(0) scale(0.98); transition-duration: 0.1s; }
-.pos-page .btn-primary { position: relative; overflow: hidden; isolation: isolate; }
-.pos-page .btn-primary::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.5) 50%, transparent 70%); transform: translateX(-120%); transition: transform 0.75s var(--spring); }
-.pos-page .btn-primary:hover::after { transform: translateX(120%); }
-.pos-page .btn-primary:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 16px 36px -12px rgba(214, 168, 78, 0.72); }
-.pos-page .btn:hover svg.i-down { transform: translateY(2px); }
-.pos-page .link:hover { color: var(--gold-hover); }
-
 /* Hero */
 .pos-page .backdrop { inset: -116px 0 auto 0; height: 1080px; }
 .pos-page .backdrop::before { background: radial-gradient(42% 46% at 74% 40%, var(--lift), transparent 72%), radial-gradient(60% 50% at 28% 0%, var(--glow), transparent 70%); }
@@ -76,19 +48,6 @@ html { scroll-padding-top: 132px; }
 @media (hover: hover) {
   .hero-visual:hover .app-window { transform: rotateY(-3deg) rotateX(1deg); }
 }
-
-/* A Windows window around a real screen of the program */
-.app-window { position: relative; overflow: hidden; border-radius: 12px; background: #fff; color-scheme: light;
-  box-shadow: 0 0 0 1px rgba(238, 233, 223, 0.14), 0 2px 4px rgba(0, 0, 0, 0.2), 0 30px 60px -20px rgba(0, 0, 0, 0.7), 0 70px 120px -50px rgba(0, 0, 0, 0.75); }
-.window-bar { display: flex; align-items: center; height: 30px; padding-left: 14px; background: #eceef3; border-bottom: 1px solid #d9dde5; color: #4b5260; font: 500 11.5px/1 var(--font); -webkit-user-select: none; user-select: none; }
-.window-controls { display: flex; height: 100%; margin-left: auto; }
-.window-controls i { position: relative; display: block; width: 40px; height: 100%; }
-.window-controls i::before, .window-controls i::after { content: ""; position: absolute; left: 50%; top: 50%; }
-.window-controls i:nth-child(1)::before { width: 10px; height: 1px; margin-left: -5px; background: #5b6170; }
-.window-controls i:nth-child(2)::before { width: 9px; height: 9px; margin: -5px 0 0 -5px; border: 1px solid #5b6170; border-radius: 2px; }
-.window-controls i:nth-child(3)::before, .window-controls i:nth-child(3)::after { width: 12px; height: 1px; margin-left: -6px; background: #5b6170; transform: rotate(45deg); }
-.window-controls i:nth-child(3)::after { transform: rotate(-45deg); }
-.app-window img { display: block; width: 100%; height: auto; border: 0; border-radius: 0; background: #fff; }
 
 /* The cards over the hero's window. Practice figures that match the basket on screen. */
 .float { position: absolute; z-index: 2; width: 17em; padding: 1.1em 1.2em; border-radius: 1.2em; font-size: 11px; font-size: clamp(8.5px, 2.05cqw, 12.5px); line-height: 1.35; color: var(--text);
@@ -126,9 +85,6 @@ html { scroll-padding-top: 132px; }
 .notice-icon svg { width: 18px; height: 18px; }
 .notice-band p { padding-top: 6px; }
 
-.head-center { margin-inline: auto; text-align: center; }
-.head-center p:not(.label) { margin-inline: auto; }
-
 /* Sale → fiscal coupon → accounting → declarations */
 .flow { position: relative; margin-top: clamp(40px, 6vw, 64px); padding: clamp(28px, 4vw, 52px); border: 1px solid var(--card-line); border-radius: var(--r-xl);
   background: radial-gradient(70% 120% at 50% -20%, var(--lift), transparent 62%), var(--bg-raised); box-shadow: var(--card-shadow); overflow: hidden; }
@@ -145,24 +101,14 @@ html { scroll-padding-top: 132px; }
 .flow-step p { margin-top: var(--space-2); color: var(--text-2); font-size: 0.9375rem; text-wrap: pretty; }
 .flow-note { margin-top: var(--space-4); text-align: center; font-size: var(--text-sm); color: var(--text-3); }
 
-.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: var(--space-6); border: 1px solid var(--card-line); border-radius: var(--r-xl); background: var(--card); box-shadow: var(--card-shadow); }
-.stat { padding: clamp(22px, 3vw, 34px); }
-.stat + .stat { border-left: 1px solid var(--line); }
-.stat::before { content: ""; display: block; width: 22px; height: 2px; margin-bottom: var(--space-5); border-radius: 2px; background: var(--gold); }
-.stat b { display: block; font: 600 clamp(2.25rem, 1.5rem + 2.2vw, 3.25rem)/1 var(--display); letter-spacing: -0.035em; font-variant-numeric: tabular-nums; color: var(--text); }
-.stat b small { margin-left: 0.1em; font-size: 0.5em; letter-spacing: 0; color: var(--gold); }
-.stat > span { display: block; margin-top: var(--space-3); color: var(--text-2); font-size: var(--text-sm); text-wrap: pretty; }
-
 /* What it does, in seven groups */
 .bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-5); margin-top: clamp(40px, 6vw, 64px); }
 .cat { grid-column: span 4; position: relative; display: flex; flex-direction: column; padding: clamp(22px, 2.6vw, 30px); border: 1px solid var(--card-line); border-radius: var(--r-xl);
   background: var(--card), var(--bg); box-shadow: var(--card-shadow); isolation: isolate; overflow: hidden;
   transition: border-color 0.3s var(--ease), transform 0.5s var(--spring), box-shadow 0.5s var(--spring); }
 .cat::before { content: ""; position: absolute; inset: 0 0 auto; height: 1px; background: linear-gradient(90deg, transparent 10%, rgba(214, 168, 78, 0.7), transparent 90%); opacity: 0; transition: opacity 0.4s var(--ease); }
-.cat::after, .pos-page .plan::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity 0.4s var(--ease);
-  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, -30%), rgba(110, 145, 205, 0.13), transparent 45%); }
 .cat:hover { border-color: var(--card-line-hover); transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 36px 60px -34px rgba(0, 0, 0, 0.9); }
-.cat:hover::before, .cat:hover::after, .pos-page .plan:hover::after { opacity: 1; }
+.cat:hover::before { opacity: 1; }
 .cat-wide { grid-column: span 6; }
 .cat-full { grid-column: 1 / -1; }
 .cat-full .cat-items { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--space-6); }
@@ -220,21 +166,8 @@ html { scroll-padding-top: 132px; }
 .screen-picker button:focus-visible { opacity: 1; }
 .screen-picker button[aria-pressed="true"] { opacity: 1; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(214, 168, 78, 0.28); }
 
-/* How it is used */
-.pos-page .steps { gap: var(--space-4); }
-.pos-page .step { padding: clamp(22px, 2.4vw, 28px); border: 1px solid var(--card-line); border-radius: 20px; background: var(--card); box-shadow: var(--card-shadow);
-  transition: border-color 0.3s var(--ease), transform 0.5s var(--spring); }
-.pos-page .step:hover { border-color: var(--card-line-hover); transform: translateY(-3px); }
-.pos-page .step::before { display: inline-grid; place-items: center; min-width: 40px; height: 30px; padding: 0 10px; border-radius: var(--r-full); border: 1px solid var(--gold-edge); background: var(--gold-tint); }
-
 /* The licence */
 .licence-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; gap: clamp(32px, 5vw, 72px); }
-.pos-page .features { gap: var(--space-4); border: 0; }
-.pos-page .features > .feature { padding: clamp(22px, 2.4vw, 28px); border: 1px solid var(--card-line); border-radius: 20px; background: var(--card); box-shadow: var(--card-shadow);
-  transition: border-color 0.3s var(--ease), transform 0.5s var(--spring); }
-.pos-page .features > .feature:hover { background: var(--card); border-color: var(--card-line-hover); transform: translateY(-3px); }
-.pos-page .features > .feature > svg { box-sizing: border-box; width: 40px; height: 40px; padding: 9px; border-radius: 12px; border: 1px solid var(--gold-edge); background: var(--gold-tint); color: var(--gold); }
-.pos-page .features > .feature h3 { margin-top: var(--space-4); }
 
 /* Prices */
 .pos-page .term-switch { position: relative; display: inline-grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding: 5px; vertical-align: middle; border-color: var(--line-strong); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04); }
@@ -280,36 +213,15 @@ html { scroll-padding-top: 132px; }
 .pos-page .addon:hover { border-color: var(--card-line-hover); transform: translateY(-3px); }
 .pos-page .contact-card { border-color: var(--card-line); border-radius: var(--r-xl); background: radial-gradient(60% 120% at 100% 50%, var(--lift), transparent 70%), var(--bg-raised); box-shadow: var(--card-shadow); }
 
-/* Questions, and the comparison table, open smoothly where the browser can */
-.pos-page .faq { display: grid; gap: var(--space-3); border-top: 0; }
-.pos-page .qa { padding: 0 var(--space-5); border: 1px solid var(--card-line); border-radius: 16px; background: var(--card); transition: border-color 0.3s var(--ease); }
-.pos-page .qa:hover, .pos-page .qa[open] { border-color: var(--card-line-hover); }
-.pos-page .qa summary { min-height: 60px; }
-.pos-page .qa summary::after, .pos-page .compare summary::after { content: "+"; content: "+" / ""; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line-strong);
-  font-size: 1.125rem; line-height: 1; transition: transform 0.4s var(--spring), border-color 0.3s var(--ease), background-color 0.3s var(--ease); }
-.pos-page .qa[open] summary::after, .pos-page .compare[open] summary::after { content: "+"; content: "+" / ""; transform: rotate(45deg); border-color: var(--gold-edge); background: var(--gold-tint); }
-@supports selector(::details-content) {
-  .pos-page .qa::details-content, .pos-page .compare::details-content { block-size: 0; overflow-y: clip; transition: block-size 0.4s var(--spring), content-visibility 0.4s allow-discrete; }
-  .pos-page .qa[open]::details-content, .pos-page .compare[open]::details-content { block-size: auto; }
-}
-
-/* The film, and the last call */
+/* The film */
 .pos-page .film-row { border-color: var(--card-line); box-shadow: var(--card-shadow); }
-.pos-page .closing .frame { border-color: var(--card-line); box-shadow: var(--card-shadow); }
-.pos-page .closing .frame::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0.45; pointer-events: none;
-  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(70% 70% at 50% 100%, #000, transparent 75%); mask-image: radial-gradient(70% 70% at 50% 100%, #000, transparent 75%); }
 
 /* Motion. Everything here stops under reduced motion: site.css turns animations and transitions off. */
 @media (prefers-reduced-motion: no-preference) {
-  .js .pos-hero [data-reveal] { filter: blur(8px); transform: translateY(24px); transition: opacity 0.9s var(--spring), transform 1s var(--spring), filter 0.9s var(--spring); transition-delay: calc(var(--i, 0) * 90ms); }
-  .js .pos-hero [data-reveal].in { filter: none; transform: none; }
-  /* The headline, the introduction and the window are what the page counts as loaded by, so they are drawn at once and only settle into place. */
-  .js .pos-hero h1[data-reveal], .js .pos-hero .hero-lede[data-reveal], .js .pos-hero .hero-visual[data-reveal] { opacity: 1; }
+  /* The program's window is drawn at once and only settles into place, like the headline (ui.css). */
+  .js .pos-hero .hero-visual[data-reveal] { opacity: 1; }
   .js .pos-hero .hero-visual[data-reveal] { filter: none; transform: translateY(32px) scale(0.97); transition-duration: 0.9s, 1.2s, 0s; }
   .js .pos-hero .hero-visual[data-reveal].in { transform: none; }
-  .js .pos-hero h1 .soft { display: inline-block; animation: rise 1.1s var(--spring) 0.5s both; }
-  @keyframes rise { from { opacity: 0; transform: translateY(0.3em); filter: blur(10px); } }
 
   .float { animation: float-in 0.9s var(--spring) both, bob 7s ease-in-out infinite; }
   .float-pay { animation-delay: 0.9s, 1.8s; }
@@ -320,23 +232,10 @@ html { scroll-padding-top: 132px; }
   .float-split i:nth-child(3) { animation-delay: 1.9s; }
   .hero-visual.is-paused .float, .hero-visual.is-paused .float-split i { animation-play-state: paused; }
   @keyframes float-in { from { opacity: 0; transform: translateY(18px) scale(0.96); } }
-  @keyframes bob { 50% { transform: translateY(-8px); } }
   @keyframes grow { from { transform: scaleX(0); } }
 
-  /* Cards come in by animation rather than transition, so their own hover transitions keep working afterwards. */
-  .js .pos-page [data-anim], .js .pos-page [data-stagger] { opacity: 1; transform: none; transition: none; }
+  /* The groups keep their hover transitions after coming in (ui.css brings them in by animation). */
   .js .pos-page .cat[data-anim] { transition: border-color 0.3s var(--ease), transform 0.5s var(--spring), box-shadow 0.5s var(--spring); }
-  .js .pos-page [data-anim]:not(.in), .js .pos-page [data-stagger]:not(.in) > * { opacity: 0; }
-  .js .pos-page [data-anim].in { animation: rise-in 0.9s var(--spring) backwards; animation-delay: calc(var(--i, 0) * 100ms); }
-  .js .pos-page [data-stagger].in > * { animation: rise-in 0.8s var(--spring) backwards; }
-  .js .pos-page [data-stagger].in > :nth-child(2) { animation-delay: 70ms; }
-  .js .pos-page [data-stagger].in > :nth-child(3) { animation-delay: 140ms; }
-  .js .pos-page [data-stagger].in > :nth-child(4) { animation-delay: 210ms; }
-  .js .pos-page [data-stagger].in > :nth-child(5) { animation-delay: 280ms; }
-  .js .pos-page [data-stagger].in > :nth-child(6) { animation-delay: 350ms; }
-  .js .pos-page [data-stagger].in > :nth-child(7) { animation-delay: 420ms; }
-  .js .pos-page [data-stagger].in > :nth-child(8) { animation-delay: 490ms; }
-  @keyframes rise-in { from { opacity: 0; transform: translateY(22px); } }
   .cat.in .dep i { animation: bar 1s var(--spring) backwards; animation-delay: calc(0.35s + var(--j) * 90ms); }
   @keyframes bar { from { transform: scaleY(0); } }
 
@@ -354,7 +253,7 @@ html { scroll-padding-top: 132px; }
   .flow-track { background: linear-gradient(90deg, var(--gold-deep), var(--gold)); opacity: 0.55; }
   .flow-node { border-color: var(--gold-edge); color: var(--gold); }
   .hero-visual .app-window, .hero-visual:hover .app-window { transform: none; }
-  .cat:hover, .pos-page .plan:hover, .pos-page .btn:hover, .pos-page .step:hover, .pos-page .features > .feature:hover, .pos-page .addon:hover, .screen-picker button:hover { transform: none; }
+  .cat:hover, .pos-page .plan:hover, .pos-page .addon:hover, .screen-picker button:hover { transform: none; }
 }
 
 /* 1080px: the hero stacks */
@@ -378,9 +277,6 @@ html { scroll-padding-top: 132px; }
   .showcase-panel, .licence-top { grid-template-columns: 1fr; }
   .showcase-copy, .showcase-media { grid-column: auto; grid-row: auto; }
 }
-@media (max-width: 960px) and (min-width: 641px) {
-  .pos-page .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (max-width: 760px) {
   .nav .subnav-cta { display: none; }
   .subnav-links { -webkit-mask-image: linear-gradient(90deg, #000 84%, transparent); mask-image: linear-gradient(90deg, #000 84%, transparent); }
@@ -393,9 +289,6 @@ html { scroll-padding-top: 132px; }
   .flow-step .flow-node { grid-row: 1 / span 3; }
   .flow-step:not(:last-child)::before { content: ""; position: absolute; left: 27px; top: 56px; bottom: 0; width: 2px; background: var(--line-strong); }
   .flow-num { margin-top: 6px; }
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stat:nth-child(3) { border-left: 0; }
-  .stat:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .pos-js .showcase-tabs { display: grid; width: 100%; border-radius: 18px; }
   .showcase-tabs [role="tab"] { flex-direction: column; gap: 4px; min-height: 64px; padding: 8px 6px; border-radius: 13px; white-space: normal; text-align: center; font-size: 0.75rem; }
   .tab-thumb { border-radius: 13px; }
@@ -416,7 +309,6 @@ html { scroll-padding-top: 132px; }
   .hero-note { margin-top: 48px; }
   .pos-hero .platform { padding: 12px 14px; }
   .pos-page .notice-band { padding: 16px; }
-  .pos-page .qa { padding: 0 var(--space-4); }
 }
 @media (max-width: 560px) {
   .pos-page .term-switch { display: grid; width: 100%; }
@@ -424,11 +316,8 @@ html { scroll-padding-top: 132px; }
 }
 
 @media print {
-  .subnav, .read-progress, .float, .screen-picker, .showcase-tabs { display: none !important; }
+  .subnav, .float, .screen-picker, .showcase-tabs { display: none !important; }
   .pos-js .showcase-panel:not(.is-active) { display: grid; }
   .pos-js .screens > .shot { grid-area: auto; opacity: 1; visibility: visible; transform: none; }
   .hero-visual .app-window { transform: none; }
-  .js [data-reveal], .js .pos-page [data-anim], .js .pos-page [data-stagger] > *, .js .pos-hero h1 .soft { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; }
-  .stat b > [aria-hidden] { display: none; }
-  .stat b > .sr-only { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; }
 }

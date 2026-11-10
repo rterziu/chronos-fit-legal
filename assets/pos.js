@@ -1,4 +1,4 @@
-/* Chronos POS's page: the page's own navigation, the screens, the counters, and pausing motion that is off screen. */
+/* Chronos POS's page: its own navigation, the screens, and pausing its motion off screen. The shared behaviour is in ui.js. */
 (function () {
   'use strict';
 
@@ -11,31 +11,6 @@
   var canObserve = 'IntersectionObserver' in window;
   var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
   var inOrder = function (a, b) { return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1; };
-
-  /* How far down the page: a gold line under the header. */
-  var nav = document.querySelector('.nav');
-  if (nav) {
-    var queued = false;
-    var measure = function () {
-      queued = false;
-      var max = root.scrollHeight - window.innerHeight;
-      nav.style.setProperty('--progress', max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)).toFixed(4) : '0');
-    };
-    var queue = function () {
-      if (!queued) { queued = true; window.requestAnimationFrame(measure); }
-    };
-    window.addEventListener('scroll', queue, { passive: true });
-    window.addEventListener('resize', queue);
-    measure();
-  }
-
-  /* The phone menu closes when focus leaves it, so focus never lands behind the open panel. */
-  var menu = document.querySelector('.menu');
-  if (menu) {
-    menu.addEventListener('focusout', function (event) {
-      if (menu.open && event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false;
-    });
-  }
 
   /* The page's own navigation: the part on screen, and the download button once the hero's has gone. */
   var subnav = document.querySelector('.subnav');
@@ -97,48 +72,6 @@
     } else {
       subnav.classList.add('show-cta');
     }
-  }
-
-  /* Numbers count up once, when they come into view. The final figure is in the page for readers and search. */
-  var format = function (value, decimals) {
-    var parts = value.toFixed(decimals).split('.');
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    return parts.join('.');
-  };
-  var decimalsOf = function (el) { return parseInt(el.getAttribute('data-decimals') || '0', 10); };
-  var counters = document.querySelectorAll('[data-count]');
-  var settle = function (el) { el.textContent = format(parseFloat(el.getAttribute('data-count')), decimalsOf(el)); };
-  if (counters.length && canObserve && !reduce) {
-    var counter = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        counter.unobserve(entry.target);
-        var el = entry.target;
-        var target = parseFloat(el.getAttribute('data-count'));
-        var decimals = decimalsOf(el);
-        var wait = parseInt(el.getAttribute('data-delay') || '0', 10);
-        var done = false;
-        var finish = function () { done = true; settle(el); };
-        window.setTimeout(function () {
-          var start = null;
-          var tick = function (now) {
-            if (done) return;
-            if (start === null) start = now;
-            var k = Math.min(1, (now - start) / 1600);
-            if (k >= 1) { finish(); return; }
-            el.textContent = format(target * (1 - Math.pow(1 - k, 4)), decimals);
-            window.requestAnimationFrame(tick);
-          };
-          window.requestAnimationFrame(tick);
-        }, wait);
-        // Where frames are not drawn (a background tab, some renderers) the figure still arrives.
-        window.setTimeout(finish, wait + 2200);
-      });
-    }, { threshold: 0.5 });
-    each(counters, function (el) {
-      el.textContent = format(0, decimalsOf(el));
-      counter.observe(el);
-    });
   }
 
   /* Motion that is off screen waits. */
@@ -235,22 +168,5 @@
     } else {
       loadAll();
     }
-  }
-
-  /* On paper: every picture loaded and every figure final. */
-  window.addEventListener('beforeprint', function () {
-    each(document.querySelectorAll('img[loading="lazy"]'), function (img) { img.loading = 'eager'; });
-    each(counters, settle);
-  });
-
-  /* A soft light that follows the pointer across cards, where there is a pointer. */
-  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    each(document.querySelectorAll('[data-spot]'), function (el) {
-      el.addEventListener('pointermove', function (event) {
-        var box = el.getBoundingClientRect();
-        el.style.setProperty('--mx', Math.round(event.clientX - box.left) + 'px');
-        el.style.setProperty('--my', Math.round(event.clientY - box.top) + 'px');
-      });
-    });
   }
 })();

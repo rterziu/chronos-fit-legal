@@ -21,8 +21,10 @@
     <script>document.documentElement.classList.add('js');</script>
     <script>(function(){var p=location.pathname;if(p.indexOf('/app/')===0&&p!=='/app/'){try{sessionStorage.setItem('chronos-app-path',p+location.search+location.hash);}catch(e){}location.replace('/app/');}})();</script>
     <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/ui.css" />
+    <script src="/assets/ui.js" defer></script>
   </head>
-  <body>
+  <body class="ui">
     <a class="skip" href="#main">Skip to content</a>
     <header class="nav" id="top">
       <div class="container nav-in">
@@ -45,6 +47,7 @@
           </nav>
         </details>
       </div>
+      <span class="read-progress" aria-hidden="true"></span>
     </header>
 
     <main id="main">
