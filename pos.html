@@ -23,8 +23,10 @@
     <link rel="alternate" hreflang="sq" href="https://chronosapplications.com/pos.sq.html" />
     <link rel="alternate" hreflang="x-default" href="https://chronosapplications.com/pos.html" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <link rel="stylesheet" href="./assets/pos.css" />
+    <script src="./assets/pos.js" defer></script>
   </head>
-  <body>
+  <body class="pos-page">
     <a class="skip" href="#main">Skip to content</a>
     <header class="nav" id="top">
       <div class="container nav-in">
@@ -49,36 +51,101 @@
           </nav>
         </details>
       </div>
+        <div class="subnav">
+          <div class="container subnav-in">
+            <a class="subnav-title" href="#top">Chronos POS</a>
+            <nav class="subnav-links" aria-label="On this page">
+              <a href="#features">Features</a>
+              <a href="#screens">Screens</a>
+              <a href="#how">How it works</a>
+              <a href="#licence">Licence</a>
+              <a href="#prices">Prices</a>
+              <a href="#questions">Questions</a>
+            </nav>
+            <a class="btn btn-primary btn-sm subnav-cta" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Download the demo<svg class="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+        <span class="read-progress" aria-hidden="true"></span>
     </header>
 
     <main id="main" style="--accent: var(--gold)">
       <section class="hero pos-hero">
-        <div class="backdrop"></div>
-        <div class="container">
+        <div class="backdrop" aria-hidden="true"></div>
+        <div class="container hero-grid">
           <div class="hero-copy">
             <div class="hero-brand" data-reveal><img class="lockup" src="./assets/brand/chronos-pos.svg" width="302" height="34" alt="Chronos POS" /><span class="status">Demo available · not yet certified</span></div>
             <h1 data-reveal style="--i: 1">The till and the books, <span class="soft">in one program.</span></h1>
             <p class="hero-lede" data-reveal style="--i: 2">Point-of-sale software designed for fiscalization in Kosovo. Sell at the counter, then close the month from the same place: books, declarations, purchases and payroll.</p>
-            <ul class="platforms" data-reveal style="--i: 3" aria-label="Platforms">
-              <li class="platform is-on"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/><path d="M9 7h2.6v2.6H9zM12.4 7H15v2.6h-2.6zM9 10.4h2.6V13H9zM12.4 10.4H15V13h-2.6z" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Windows</span><span class="platform-state">Available now</span></span></li>
-              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><circle cx="12" cy="5.5" r="1.25" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Android</span><span class="platform-state">Coming soon</span></span></li>
-              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="3.2"/><path d="M10.2 5.5h3.6" stroke-width="2.4"/><path d="M10.4 18.6h3.2"/></svg></span><span class="platform-text"><span class="platform-name">iOS</span><span class="platform-state">Coming soon</span></span></li>
-            </ul>
-            <p class="langs" data-reveal style="--i: 3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>In Albanian, English, Serbian and Turkish</span></p>
             <div class="actions" data-reveal style="--i: 3">
-              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Download the demo for Windows<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Download the demo for Windows<svg class="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
               <a class="btn btn-lg" href="#how">See how it is used</a>
               <a class="btn btn-lg" href="#prices">See prices</a>
             </div>
             <p class="caption" data-reveal style="--i: 3">64-bit Windows · about 125 MB · 30-day demo</p>
+            <ul class="platforms" data-reveal style="--i: 4" aria-label="Platforms">
+              <li class="platform is-on"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/><path d="M9 7h2.6v2.6H9zM12.4 7H15v2.6h-2.6zM9 10.4h2.6V13H9zM12.4 10.4H15V13h-2.6z" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Windows</span><span class="platform-state">Available now</span></span></li>
+              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><circle cx="12" cy="5.5" r="1.25" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Android</span><span class="platform-state">Coming soon</span></span></li>
+              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="3.2"/><path d="M10.2 5.5h3.6" stroke-width="2.4"/><path d="M10.4 18.6h3.2"/></svg></span><span class="platform-text"><span class="platform-name">iOS</span><span class="platform-state">Coming soon</span></span></li>
+            </ul>
+            <p class="langs" data-reveal style="--i: 4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>In Albanian, English, Serbian and Turkish</span></p>
           </div>
-          <figure class="shot shot-hero" data-reveal style="--i: 2"><img src="./assets/pos/en-sale.png" width="1280" height="800" alt="The sale screen of Chronos POS: articles in the middle, the basket and the amount to pay on the right." /></figure>
+          <figure class="hero-visual" data-reveal style="--i: 2">
+            <div class="hero-stage">
+              <div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img fetchpriority="high" src="./assets/pos/en-sale.png" width="1280" height="800" alt="The sale screen of Chronos POS: articles in the middle, the basket and the amount to pay on the right." /></div>
+              <div class="float float-pay" aria-hidden="true">
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></svg></span><b>Payment</b><span class="float-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg>Paid</span></div>
+                <div class="float-row"><span>Cash</span><b>2.00€</b></div>
+                <div class="float-row"><span>Card</span><b>1.10€</b></div>
+                <div class="float-row float-total"><span>Total</span><b>3.10€</b></div>
+              </div>
+              <div class="float float-day" aria-hidden="true">
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19v-7M10 19V6M15 19v-5M20 19V9"/></svg></span><b>Today’s sales</b></div>
+                <p class="float-big"><span data-count="1284.60" data-decimals="2" data-delay="1100">1,284.60</span>€</p>
+                <div class="float-split"><i style="--w: 62%"></i><i style="--w: 31%"></i><i style="--w: 7%"></i></div>
+                <div class="float-legend"><span>Cash</span><span>Card</span><span>Voucher</span></div>
+              </div>
+              <div class="float float-vat" aria-hidden="true">
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><b>By VAT rate</b></div>
+                <div class="float-row"><span>VAT 18%</span><b>1,032.40€</b></div>
+                <div class="float-row"><span>VAT 8%</span><b>252.20€</b></div>
+              </div>
+            </div>
+            <figcaption class="hero-note">Demo mode · practice data</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section pos-notice">
         <div class="container">
-          <p class="notice-band" data-reveal><strong>Not yet certified.</strong> Chronos POS has not yet been certified by the Tax Administration of Kosovo, so it must not be used to issue fiscal coupons for real sales. The demo issues none: nothing reaches ATK, and every coupon it prints is marked as having no fiscal value.</p>
+          <div class="notice-band" data-reveal><span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.8 2.8 19.6h18.4L12 3.8z"/><path d="M12 10v4.2M12 17.1v.1"/></svg></span><p><strong>Not yet certified.</strong> Chronos POS has not yet been certified by the Tax Administration of Kosovo, so it must not be used to issue fiscal coupons for real sales. The demo issues none: nothing reaches ATK, and every coupon it prints is marked as having no fiscal value.</p></div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="flow" style="padding-top: 0">
+        <div class="container">
+          <div class="head head-center" data-reveal>
+            <p class="label">From sale to declaration</p>
+            <h2>One sale, all the way to the declarations.</h2>
+            <p>What happens at the counter carries on into the books and the month’s forms, in the same program.</p>
+          </div>
+          <div class="flow" data-flow data-reveal style="--i: 1">
+            <div class="flow-inner">
+              <span class="flow-track" aria-hidden="true"><span class="flow-beam"></span></span>
+              <ol class="flow-steps">
+                <li class="flow-step" style="--n: 0"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.3 10.5h10.3L20 7.5H6.3"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></span><span class="flow-num" aria-hidden="true">01</span><h3>Sale</h3><p>Search, tap and pay, by cash, card or voucher.</p></li>
+                <li class="flow-step" style="--n: 1"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg></span><span class="flow-num" aria-hidden="true">02</span><h3>Fiscal coupon</h3><p>Signed, with its QR code, laid out after ATK’s samples.</p></li>
+                <li class="flow-step" style="--n: 2"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg></span><span class="flow-num" aria-hidden="true">03</span><h3>Accounting</h3><p>The sales and purchase books, as in EDI.</p></li>
+                <li class="flow-step" style="--n: 3"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5"/><path d="M9.8 14.6l2 2 3.6-3.6"/></svg></span><span class="flow-num" aria-hidden="true">04</span><h3>Tax declarations</h3><p>TV, QS, QL, WM, CM, WR and CD, prepared for you to check and file in EDI.</p></li>
+              </ol>
+            </div>
+          </div>
+          <p class="flow-note" data-reveal>The books come with Chronos Plus, the declarations with Chronos Pro.</p>
+          <ul class="stats" data-reveal data-stagger>
+            <li class="stat"><b><span class="sr-only">36</span><span aria-hidden="true"><span data-count="36">36</span></span></b><span>functions in Chronos Pro</span></li>
+            <li class="stat"><b><span class="sr-only">7</span><span aria-hidden="true"><span data-count="7">7</span></span></b><span>tax forms prepared</span></li>
+            <li class="stat"><b><span class="sr-only">11</span><span aria-hidden="true"><span data-count="11">11</span></span></b><span>internal-control rules</span></li>
+            <li class="stat"><b><span class="sr-only">48 h</span><span aria-hidden="true"><span data-count="48">48</span><small>h</small></span></b><span>of selling without internet, as the law allows</span></li>
+          </ul>
         </div>
       </section>
 
@@ -106,57 +173,105 @@
             <h2>From the first sale to the month’s declarations.</h2>
             <p>What is included depends on the package: <a class="inline-link" href="#prices">see the prices</a>.</p>
           </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">At the counter</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11l5.2 1.3a2 2 0 0 1 1.5 2.3l-.7 4A2.5 2.5 0 0 1 15.5 21H12a4 4 0 0 1-3-1.4L5.5 15.5a1.5 1.5 0 0 1 2.2-2L9 15"/></svg><h3>A sale in a few taps</h3><p>Search by name or barcode, tap the article, choose how it was paid. Best sellers are one tap away, and on Windows the till can be worked from the keyboard.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h3>Discounts and split payments</h3><p>A discount on one article or on the whole basket, and one sale paid by cash, card and voucher together, with the change worked out.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 20h12M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0L5 8zM19 8l-2.5 6a3 3 0 0 0 5 0L19 8z"/></svg><h3>Quantities as you measure them</h3><p>Kilograms and grams, litres and millilitres, hours and minutes, each in the article’s own unit.</p></div>
-            </div>
-          </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">The fiscal coupon</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg><h3>Laid out after ATK’s samples</h3><p>Signed, with its QR code and its numbers. It prints on 58 and 80 mm rolls, always in Albanian, and a second print is marked as a copy.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M4 12h10a6 6 0 0 1 0 12"/></svg><h3>Returns and cancellations</h3><p>Nothing is edited or deleted. A mistake is corrected by a new coupon that refers to the first, and coupons from the paper block can be entered afterwards.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M19 13a10 10 0 0 0-3-2.1"/><circle cx="12" cy="20" r=".8"/></svg><h3>Designed to sell without internet</h3><p>Coupons are still issued and marked offline, then sent by themselves and in order once the connection is back. The law allows 48 hours, and the program warns as they pass.</p></div>
-            </div>
-          </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">The books</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><h3>Books and declarations</h3><p>Sales and purchase books, and forms TV, QS, QL, WM, CM, WR and CD laid out like ATK’s own, with a reminder before each deadline. You check them and file them in EDI.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><h3>Purchases by what they are</h3><p>Investments, expenses and goods, line by line. Goods enter the stock, investments the asset register, and expenses the right box of form CD.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3.5 3.5 0 0 1 0 6.5M18 15a6 6 0 0 1 3 5"/></svg><h3>Payroll</h3><p>Employees, the month’s pay and payslips in Excel, feeding WM and CM. Type the net pay if that is what you know, and the gross is worked out.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Invoices to businesses</h3><p>Invoices with credit and debit notes, on A4 or on the 80 mm roll, with or without a VAT number, and a register of customers.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4V8z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg><h3>Stock and fixed assets</h3><p>Costs, receipts and counts, the stock list in Excel, and an asset register with depreciation for the books and for tax.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h8l8 8-8 8-8-8V4z"/><circle cx="8.5" cy="8.5" r="1.2"/></svg><h3>The VAT rate</h3><p>The law’s list of what carries 8% wherever a rate is chosen, and a suggestion when a name such as an electricity bill looks like it. It never changes a rate by itself.</p></div>
-            </div>
-          </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">Control and safety</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l3 3"/></svg><h3>Who can do what</h3><p>Owner, accountant and cashier, each with their own PIN and permissions. A till left alone signs out by itself, and every action is logged.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4"/></svg><h3>Internal controls</h3><p>Eleven rules raise alarms on cancellations, discounts, stock and gaps in sales, with a monthly report.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h3>Your data stays with you</h3><p>Records are encrypted on your own computer, and no server of ours holds them. A backup is made each day and on closing, to the folder you choose, sealed with your password.</p></div>
-            </div>
+          <div class="bento">
+            <article class="cat cat-wide" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 6.5h8v3.5H8z"/><path d="M8.6 14h.01M12 14h.01M15.4 14h.01M8.6 17.5h.01M12 17.5h.01M15.4 17.5h.01"/></svg></span><h3>Point of Sale</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11l5.2 1.3a2 2 0 0 1 1.5 2.3l-.7 4A2.5 2.5 0 0 1 15.5 21H12a4 4 0 0 1-3-1.4L5.5 15.5a1.5 1.5 0 0 1 2.2-2L9 15"/></svg><h4>A sale in a few taps</h4><p>Search by name or barcode, tap the article, choose how it was paid. Best sellers are one tap away, and on Windows the till can be worked from the keyboard.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h4>Discounts and split payments</h4><p>A discount on one article or on the whole basket, and one sale paid by cash, card and voucher together, with the change worked out.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 20h12M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0L5 8zM19 8l-2.5 6a3 3 0 0 0 5 0L19 8z"/></svg><h4>Quantities as you measure them</h4><p>Kilograms and grams, litres and millilitres, hours and minutes, each in the article’s own unit.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-wide" data-reveal data-anim data-spot style="--i: 1">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2.5v2.5H14zM17.5 17.5H20V20h-2.5zM20 14v.5M14 20h.5"/></svg></span><h3>Fiscalization</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg><h4>Laid out after ATK’s samples</h4><p>Signed, with its QR code and its numbers. It prints on 58 and 80 mm rolls, always in Albanian, and a second print is marked as a copy.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M4 12h10a6 6 0 0 1 0 12"/></svg><h4>Returns and cancellations</h4><p>Nothing is edited or deleted. A mistake is corrected by a new coupon that refers to the first, and coupons from the paper block can be entered afterwards.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M19 13a10 10 0 0 0-3-2.1"/><circle cx="12" cy="20" r=".8"/></svg><h4>Designed to sell without internet</h4><p>Coupons are still issued and marked offline, then sent by themselves and in order once the connection is back. The law allows 48 hours, and the program warns as they pass.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-full" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M9 9v10.5M14.5 9v10.5"/></svg></span><h3>Accounting</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><h4>Books and declarations</h4><p>Sales and purchase books, and forms TV, QS, QL, WM, CM, WR and CD laid out like ATK’s own, with a reminder before each deadline. You check them and file them in EDI.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h4>Invoices to businesses</h4><p>Invoices with credit and debit notes, on A4 or on the 80 mm roll, with or without a VAT number, and a register of customers.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h8l8 8-8 8-8-8V4z"/><circle cx="8.5" cy="8.5" r="1.2"/></svg><h4>The VAT rate</h4><p>The law’s list of what carries 8% wherever a rate is chosen, and a suggestion when a name such as an electricity bill looks like it. It never changes a rate by itself.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-third cat-buy" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5 12 4l8.5 4.5v7L12 20l-8.5-4.5z"/><path d="M3.5 8.5 12 13l8.5-4.5M12 13v7M7.8 6.3l8.4 4.5"/></svg></span><h3>Purchases & Inventory</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><h4>Purchases by what they are</h4><p>Investments, expenses and goods, line by line. Goods enter the stock, investments the asset register, and expenses the right box of form CD.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4V8z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg><h4>Stock</h4><p>Costs, receipts and counts, and the stock list in Excel.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-third" data-reveal data-anim data-spot style="--i: 1">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v.01M18 14.5v.01"/></svg></span><h3>Payroll</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3.5 3.5 0 0 1 0 6.5M18 15a6 6 0 0 1 3 5"/></svg><h4>Payroll</h4><p>Employees, the month’s pay and payslips in Excel, feeding WM and CM. Type the net pay if that is what you know, and the gross is worked out.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5"/><path d="M10 17l5-5"/><circle cx="10.4" cy="12.4" r=".7"/><circle cx="14.6" cy="16.6" r=".7"/></svg><h4>Withholding tax</h4><p>Withholding tax and the schedules of form CD, alongside the payroll.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-third" data-reveal data-anim data-spot style="--i: 2">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9.5 21v-5h5v5M9 11.5h.01M15 11.5h.01"/></svg></span><h3>Fixed Assets</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9.5 21v-5h5v5M9 11.5h.01M15 11.5h.01"/></svg><h4>The asset register</h4><p>Depreciation for the books and for tax, and an asset’s sale or derecognition. Investments entered as purchases go straight into it.</p></div>
+              </div>
+              <div class="dep" aria-hidden="true"><i style="--h: 100%; --j: 0"></i><i style="--h: 82%; --j: 1"></i><i style="--h: 64%; --j: 2"></i><i style="--h: 46%; --j: 3"></i><i style="--h: 28%; --j: 4"></i></div>
+            </article>
+            <article class="cat cat-full" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><h3>Security & Internal Controls</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l3 3"/></svg><h4>Who can do what</h4><p>Owner, accountant and cashier, each with their own PIN and permissions. A till left alone signs out by itself, and every action is logged.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4"/></svg><h4>Internal controls</h4><p>Eleven rules raise alarms on cancellations, discounts, stock and gaps in sales, with a monthly report.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h4>Your data stays with you</h4><p>Records are encrypted on your own computer, and no server of ours holds them. A backup is made each day and on closing, to the folder you choose, sealed with your password.</p></div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section" id="screens" style="padding-top: 0">
         <div class="container">
-          <div class="head" data-reveal>
+          <div class="head head-center" data-reveal>
             <p class="label">The program</p>
             <h2>What you will see.</h2>
           </div>
-          <div class="shots" data-reveal>
-            <figure class="shot"><img src="./assets/pos/en-sale.png" width="1280" height="800" loading="lazy" alt="The sale: search, tap and pay." /><figcaption>The sale: search, tap and pay.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/en-coupon.png" width="1280" height="800" loading="lazy" alt="The coupon, marked as a demo. On a real one that line is gone." /><figcaption>The coupon, marked as a demo. On a real one that line is gone.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/en-closing.png" width="1280" height="800" loading="lazy" alt="The month’s closing, step by step." /><figcaption>The month’s closing, step by step.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/en-purchases.png" width="1280" height="800" loading="lazy" alt="Purchases, split into investments, expenses and goods." /><figcaption>Purchases, split into investments, expenses and goods.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/en-payroll.png" width="1280" height="800" loading="lazy" alt="The month’s payroll, from draft to paid." /><figcaption>The month’s payroll, from draft to paid.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/en-license.png" width="1280" height="800" loading="lazy" alt="The licence: the till’s code, and the field for yours." /><figcaption>The licence: the till’s code, and the field for yours.</figcaption></figure>
+          <div class="showcase" data-showcase data-reveal>
+            <div class="showcase-bar"><div class="showcase-tabs" role="tablist" aria-label="Parts of the program"><span class="tab-thumb" aria-hidden="true"></span><button type="button" role="tab" id="tab-sales" aria-controls="panel-sales" aria-selected="true" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 6.5h8v3.5H8z"/><path d="M8.6 14h.01M12 14h.01M15.4 14h.01M8.6 17.5h.01M12 17.5h.01M15.4 17.5h.01"/></svg><span>POS & Sales</span></button><button type="button" role="tab" id="tab-books" aria-controls="panel-books" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M9 9v10.5M14.5 9v10.5"/></svg><span>Accounting & Purchases</span></button><button type="button" role="tab" id="tab-payroll" aria-controls="panel-payroll" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v.01M18 14.5v.01"/></svg><span>Payroll & Fixed Assets</span></button></div></div>
+            <div class="showcase-panel is-active" role="tabpanel" id="panel-sales" aria-labelledby="tab-sales">
+              <div class="showcase-copy">
+                <h3>Sell, then print the coupon.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Search by name or barcode, with best sellers one tap away.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Cash, card and voucher together in one sale.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The coupon with its QR code, on 58 or 80 mm rolls.</span></li></ul>
+                <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-sale.png" width="1280" height="800" loading="lazy" alt="The sale: search, tap and pay." /></div><figcaption>The sale: search, tap and pay.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-coupon.png" width="1280" height="800" loading="lazy" alt="The coupon, marked as a demo. On a real one that line is gone." /></div><figcaption>The coupon, marked as a demo. On a real one that line is gone.</figcaption></figure></div>
+                <div class="screen-picker" role="group" aria-label="Screens"><button type="button" aria-pressed="true" aria-label="The sale: search, tap and pay."><img src="./assets/pos/en-sale.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="The coupon, marked as a demo. On a real one that line is gone."><img src="./assets/pos/en-coupon.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
+              </div>
+            </div>
+            <div class="showcase-panel" role="tabpanel" id="panel-books" aria-labelledby="tab-books">
+              <div class="showcase-copy">
+                <h3>Close the month from the same place.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Six steps, from the coupons sent to the forms filed.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Purchases split into investments, expenses and goods.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The books saved as ATK’s Excel, ready for EDI.</span></li></ul>
+                <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-closing.png" width="1280" height="800" loading="lazy" alt="The month’s closing, step by step." /></div><figcaption>The month’s closing, step by step.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-purchases.png" width="1280" height="800" loading="lazy" alt="Purchases, split into investments, expenses and goods." /></div><figcaption>Purchases, split into investments, expenses and goods.</figcaption></figure></div>
+                <div class="screen-picker" role="group" aria-label="Screens"><button type="button" aria-pressed="true" aria-label="The month’s closing, step by step."><img src="./assets/pos/en-closing.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="Purchases, split into investments, expenses and goods."><img src="./assets/pos/en-purchases.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
+              </div>
+            </div>
+            <div class="showcase-panel" role="tabpanel" id="panel-payroll" aria-labelledby="tab-payroll">
+              <div class="showcase-copy">
+                <h3>Pay people, and keep the register.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Type the net pay and the gross is worked out.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Payslips in Excel, feeding WM and CM.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>An asset register with depreciation for the books and for tax.</span></li></ul>
+                <p class="showcase-note">Payroll and the asset register come with Chronos Pro.</p>
+                <a class="link" href="#prices">Compare the packages<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-payroll.png" width="1280" height="800" loading="lazy" alt="The month’s payroll, from draft to paid." /></div><figcaption>The month’s payroll, from draft to paid.</figcaption></figure></div>
+              </div>
+            </div>
           </div>
           <p class="caption">Screens from the Windows program, in its demo mode. The business, names and figures are practice data.</p>
         </div>
@@ -168,7 +283,7 @@
             <p class="label">How it is used</p>
             <h2>From installing it to closing the month.</h2>
           </div>
-          <div class="steps" data-reveal>
+          <div class="steps" data-reveal data-stagger>
             <div class="step"><h3>Install it</h3><p>Download the installer and run it. Windows may warn you, because it is not signed yet: choose More info, then Run anyway.</p></div>
             <div class="step"><h3>Set it up once</h3><p>The owner answers once: language, business, taxes, the till and their own PIN. It starts in Demo, where nothing reaches ATK.</p></div>
             <div class="step"><h3>Add your articles</h3><p>Name, price with VAT, VAT rate, unit and category from ATK’s tables. The program points out where the law gives 8%.</p></div>
@@ -181,12 +296,15 @@
 
       <section class="section" id="licence" style="padding-top: 0">
         <div class="container">
-          <div class="head" data-reveal>
+          <div class="licence-top">
+            <div class="head" data-reveal>
             <p class="label">The licence</p>
             <h2>One licence for each till.</h2>
             <p>Licences will be issued once Chronos POS is certified. This is how they will work.</p>
           </div>
-          <div class="features" data-reveal>
+            <figure class="shot licence-shot" data-reveal style="--i: 1"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/en-license.png" width="1280" height="800" loading="lazy" alt="The licence: the till’s code, and the field for yours." /></div><figcaption>The licence: the till’s code, and the field for yours.</figcaption></figure>
+          </div>
+          <div class="features" data-reveal data-stagger>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><h3>Try it first</h3><p>Demo and Test run for 30 days on a computer with no licence. Production needs one from the first coupon.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 3 10l7 3 3 7 8-17z"/><path d="M10 13l5-5"/></svg><h3>How a till gets one</h3><p>The owner sends the till’s code and the business’s NUI, both under Settings, Setup, Licence, and pastes back the code they receive. No server of ours is involved.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>For how long</h3><p>A month, six months or a year. A renewal carries on from the old end, so no days are gained or lost.</p></div>
@@ -208,14 +326,17 @@
             <input class="term-radio" type="radio" name="term" id="term-1m" />
             <input class="term-radio" type="radio" name="term" id="term-6m" />
             <input class="term-radio" type="radio" name="term" id="term-1y" checked />
-            <div class="term-switch"><label for="term-1m">Monthly</label><label for="term-6m">6 months</label><label for="term-1y">1 year</label></div>
-            <div class="plans">
-            <article class="plan">
-              <h3>Chronos Start</h3>
+            <div class="term-switch"><span class="term-thumb" aria-hidden="true"></span><label for="term-1m">Monthly</label><label for="term-6m">6 months</label><label for="term-1y">1 year</label></div>
+            <p class="term-save">A year saves up to €51 against paying monthly.</p>
+            <div class="plans" data-reveal data-stagger>
+            <article class="plan" data-spot>
+              <div class="plan-top"><h3>Chronos Start</h3><span class="plan-tier" data-tier="1" aria-hidden="true"><i></i><i></i><i></i></span></div>
               <p class="plan-for">The till and invoices</p>
-              <div class="plan-price t-1m"><p><b>€9</b><span>/ month</span></p><p class="was"><s>€15</s><em>−40%</em></p><p class="plan-note">Paid month by month</p></div>
-              <div class="plan-price t-6m"><p><b>€50</b><span>/ 6 months</span></p><p class="was">&nbsp;</p><p class="plan-note">Paid once for six months</p></div>
-              <div class="plan-price t-1y"><p><b>€89</b><span>/ year</span></p><p class="was"><s>€150</s><em>−41%</em></p><p class="plan-note">Saves €19 against paying monthly</p></div>
+              <div class="plan-prices">
+                <div class="plan-price t-1m"><p><b>€9</b><span>/ month</span></p><p class="was"><s>€15</s><em>−40%</em></p><p class="plan-note">Paid month by month</p></div>
+                <div class="plan-price t-6m"><p><b>€50</b><span>/ 6 months</span></p><p class="was">&nbsp;</p><p class="plan-note">Paid once for six months</p></div>
+                <div class="plan-price t-1y"><p><b>€89</b><span>/ year</span></p><p class="was"><s>€150</s><em>−41%</em></p><p class="plan-note">Saves €19 against paying monthly</p></div>
+              </div>
               <ul class="points">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The fiscal coupon, returns and cancellations</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Working offline</span></li>
@@ -225,12 +346,14 @@
               </ul>
               <a class="btn" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Try the demo</a>
             </article>
-            <article class="plan">
-              <h3>Chronos Plus</h3>
+            <article class="plan" data-spot>
+              <div class="plan-top"><h3>Chronos Plus</h3><span class="plan-tier" data-tier="2" aria-hidden="true"><i></i><i></i><i></i></span></div>
               <p class="plan-for">With purchases, stock and books</p>
-              <div class="plan-price t-1m"><p><b>€15</b><span>/ month</span></p><p class="was"><s>€25</s><em>−40%</em></p><p class="plan-note">Paid month by month</p></div>
-              <div class="plan-price t-6m"><p><b>€85</b><span>/ 6 months</span></p><p class="was">&nbsp;</p><p class="plan-note">Paid once for six months</p></div>
-              <div class="plan-price t-1y"><p><b>€149</b><span>/ year</span></p><p class="was"><s>€250</s><em>−40%</em></p><p class="plan-note">Saves €31 against paying monthly</p></div>
+              <div class="plan-prices">
+                <div class="plan-price t-1m"><p><b>€15</b><span>/ month</span></p><p class="was"><s>€25</s><em>−40%</em></p><p class="plan-note">Paid month by month</p></div>
+                <div class="plan-price t-6m"><p><b>€85</b><span>/ 6 months</span></p><p class="was">&nbsp;</p><p class="plan-note">Paid once for six months</p></div>
+                <div class="plan-price t-1y"><p><b>€149</b><span>/ year</span></p><p class="was"><s>€250</s><em>−40%</em></p><p class="plan-note">Saves €31 against paying monthly</p></div>
+              </div>
               <ul class="points">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Everything in Start</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Purchases and stock</span></li>
@@ -240,12 +363,14 @@
               </ul>
               <a class="btn" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Try the demo</a>
             </article>
-            <article class="plan">
-              <h3>Chronos Pro</h3>
+            <article class="plan plan-pro" data-spot>
+              <div class="plan-top"><h3>Chronos Pro</h3><span class="plan-badge">Most complete</span><span class="plan-tier" data-tier="3" aria-hidden="true"><i></i><i></i><i></i></span></div>
               <p class="plan-for">With declarations, payroll and assets</p>
-              <div class="plan-price t-1m"><p><b>€25</b><span>/ month</span></p><p class="was"><s>€39</s><em>−36%</em></p><p class="plan-note">Paid month by month</p></div>
-              <div class="plan-price t-6m"><p><b>€140</b><span>/ 6 months</span></p><p class="was">&nbsp;</p><p class="plan-note">Paid once for six months</p></div>
-              <div class="plan-price t-1y"><p><b>€249</b><span>/ year</span></p><p class="was"><s>€390</s><em>−36%</em></p><p class="plan-note">Saves €51 against paying monthly</p></div>
+              <div class="plan-prices">
+                <div class="plan-price t-1m"><p><b>€25</b><span>/ month</span></p><p class="was"><s>€39</s><em>−36%</em></p><p class="plan-note">Paid month by month</p></div>
+                <div class="plan-price t-6m"><p><b>€140</b><span>/ 6 months</span></p><p class="was">&nbsp;</p><p class="plan-note">Paid once for six months</p></div>
+                <div class="plan-price t-1y"><p><b>€249</b><span>/ year</span></p><p class="was"><s>€390</s><em>−36%</em></p><p class="plan-note">Saves €51 against paying monthly</p></div>
+              </div>
               <ul class="points">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Everything in Plus</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Forms TV, QS, QL, CD, WM, CM and WR</span></li>
@@ -253,7 +378,7 @@
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Payroll and withholding tax</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>The asset register and internal controls</span></li>
               </ul>
-              <a class="btn" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Try the demo</a>
+              <a class="btn btn-primary" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Try the demo</a>
             </article>
             </div>
           </div>
@@ -313,7 +438,7 @@
             </div>
           </details>
           <h3 class="addons-title" data-reveal>Extras</h3>
-          <div class="addons" data-reveal>
+          <div class="addons" data-reveal data-stagger>
             <div class="addon"><h4>Installation and registration with ATK</h4><p class="addon-price"><b>€40</b><span>once per till</span></p><p>Free with a yearly licence in the first year.</p></div>
             <div class="addon"><h4>A second till of the same business</h4><p class="addon-price"><b>€5</b><span>a month in the first year</span></p><p>In any package. Later, 50% of the package’s price.</p></div>
             <div class="addon"><h4>Chronos Pro with the declarations service</h4><p class="addon-price"><b>€60</b><span>a month in the first year</span></p><p>Later €80 to €150 a month, by the size of the business.</p></div>
@@ -338,7 +463,7 @@
             <p class="label">What it needs</p>
             <h2>A Windows computer and, for the coupon, a printer.</h2>
           </div>
-          <div class="features features-2" data-reveal>
+          <div class="features features-2" data-reveal data-stagger>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><h3>64-bit Windows</h3><p>Tried on Windows 11. Android and iOS are coming soon and are not available yet.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3>Internet</h3><p>To report coupons to ATK. It keeps selling without it, within the 48 hours the law allows.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V3h10v6"/><rect x="4" y="9" width="16" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg><h3>A printer</h3><p>A thermal printer for 58 or 80 mm rolls with a Windows driver. Invoices also print on A4, and coupons can be saved as PDF.</p></div>
@@ -353,7 +478,7 @@
             <p class="label">Questions</p>
             <h2>What people ask first.</h2>
           </div>
-          <div class="faq" data-reveal>
+          <div class="faq" data-reveal data-stagger>
             <details class="qa"><summary>Is Chronos POS certified?</summary><p>Not yet. It has to pass the application to the Tax Administration of Kosovo first, with testing against its service. Until then it must not be used for real sales.</p></details>
             <details class="qa"><summary>What can I do with the demo?</summary><p>Try everything with practice data for 30 days: sales, coupons, books and payroll. Nothing reaches ATK and no coupon has fiscal value.</p></details>
             <details class="qa"><summary>Where is my data kept?</summary><p>On your own computer, encrypted. Backups go to a folder you choose, sealed with your own password. We hold none of it.</p></details>
@@ -372,7 +497,7 @@
             <h2>Try it on your own computer.</h2>
             <p>The demo needs no licence and nothing you enter leaves your computer.</p>
             <div class="actions">
-              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Download the demo for Windows<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Download the demo for Windows<svg class="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
               <a class="btn btn-lg" href="./pos-terms.html">Terms of use</a>
             </div>
           </div>

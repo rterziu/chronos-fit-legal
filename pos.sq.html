@@ -23,8 +23,10 @@
     <link rel="alternate" hreflang="sq" href="https://chronosapplications.com/pos.sq.html" />
     <link rel="alternate" hreflang="x-default" href="https://chronosapplications.com/pos.html" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <link rel="stylesheet" href="./assets/pos.css" />
+    <script src="./assets/pos.js" defer></script>
   </head>
-  <body>
+  <body class="pos-page">
     <a class="skip" href="#main">Kalo te përmbajtja</a>
     <header class="nav" id="top">
       <div class="container nav-in">
@@ -49,36 +51,101 @@
           </nav>
         </details>
       </div>
+        <div class="subnav">
+          <div class="container subnav-in">
+            <a class="subnav-title" href="#top">Chronos POS</a>
+            <nav class="subnav-links" aria-label="Në këtë faqe">
+              <a href="#features">Funksionet</a>
+              <a href="#screens">Pamjet</a>
+              <a href="#how">Si përdoret</a>
+              <a href="#licence">Licenca</a>
+              <a href="#prices">Çmimet</a>
+              <a href="#questions">Pyetje</a>
+            </nav>
+            <a class="btn btn-primary btn-sm subnav-cta" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Shkarko demon<svg class="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+        <span class="read-progress" aria-hidden="true"></span>
     </header>
 
     <main id="main" style="--accent: var(--gold)">
       <section class="hero pos-hero">
-        <div class="backdrop"></div>
-        <div class="container">
+        <div class="backdrop" aria-hidden="true"></div>
+        <div class="container hero-grid">
           <div class="hero-copy">
             <div class="hero-brand" data-reveal><img class="lockup" src="./assets/brand/chronos-pos.svg" width="302" height="34" alt="Chronos POS" /><span class="status">Demo në dispozicion · ende i pacertifikuar</span></div>
             <h1 data-reveal style="--i: 1">Arka dhe librat, <span class="soft">në një program.</span></h1>
             <p class="hero-lede" data-reveal style="--i: 2">Softuer për pikën e shitjes, i ndërtuar për fiskalizimin në Kosovë. Shit në banak, pastaj mbylle muajin nga i njëjti vend: librat, deklaratat, blerjet dhe pagat.</p>
-            <ul class="platforms" data-reveal style="--i: 3" aria-label="Platformat">
-              <li class="platform is-on"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/><path d="M9 7h2.6v2.6H9zM12.4 7H15v2.6h-2.6zM9 10.4h2.6V13H9zM12.4 10.4H15V13h-2.6z" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Windows</span><span class="platform-state">Në dispozicion</span></span></li>
-              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><circle cx="12" cy="5.5" r="1.25" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Android</span><span class="platform-state">Së shpejti</span></span></li>
-              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="3.2"/><path d="M10.2 5.5h3.6" stroke-width="2.4"/><path d="M10.4 18.6h3.2"/></svg></span><span class="platform-text"><span class="platform-name">iOS</span><span class="platform-state">Së shpejti</span></span></li>
-            </ul>
-            <p class="langs" data-reveal style="--i: 3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Në shqip, anglisht, serbisht dhe turqisht</span></p>
             <div class="actions" data-reveal style="--i: 3">
-              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Shkarko demon për Windows<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Shkarko demon për Windows<svg class="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
               <a class="btn btn-lg" href="#how">Shiko si përdoret</a>
               <a class="btn btn-lg" href="#prices">Shiko çmimet</a>
             </div>
             <p class="caption" data-reveal style="--i: 3">Windows 64-bit · rreth 125 MB · demo 30 ditë</p>
+            <ul class="platforms" data-reveal style="--i: 4" aria-label="Platformat">
+              <li class="platform is-on"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/><path d="M9 7h2.6v2.6H9zM12.4 7H15v2.6h-2.6zM9 10.4h2.6V13H9zM12.4 10.4H15V13h-2.6z" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Windows</span><span class="platform-state">Në dispozicion</span></span></li>
+              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><circle cx="12" cy="5.5" r="1.25" fill="currentColor" stroke="none"/></svg></span><span class="platform-text"><span class="platform-name">Android</span><span class="platform-state">Së shpejti</span></span></li>
+              <li class="platform"><span class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="3.2"/><path d="M10.2 5.5h3.6" stroke-width="2.4"/><path d="M10.4 18.6h3.2"/></svg></span><span class="platform-text"><span class="platform-name">iOS</span><span class="platform-state">Së shpejti</span></span></li>
+            </ul>
+            <p class="langs" data-reveal style="--i: 4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Në shqip, anglisht, serbisht dhe turqisht</span></p>
           </div>
-          <figure class="shot shot-hero" data-reveal style="--i: 2"><img src="./assets/pos/sq-sale.png" width="1280" height="800" alt="Ekrani i shitjes së Chronos POS: artikujt në mes, shporta dhe shuma për pagesë djathtas." /></figure>
+          <figure class="hero-visual" data-reveal style="--i: 2">
+            <div class="hero-stage">
+              <div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img fetchpriority="high" src="./assets/pos/sq-sale.png" width="1280" height="800" alt="Ekrani i shitjes së Chronos POS: artikujt në mes, shporta dhe shuma për pagesë djathtas." /></div>
+              <div class="float float-pay" aria-hidden="true">
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></svg></span><b>Pagesa</b><span class="float-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg>E paguar</span></div>
+                <div class="float-row"><span>Kesh</span><b>2.00€</b></div>
+                <div class="float-row"><span>Kartelë</span><b>1.10€</b></div>
+                <div class="float-row float-total"><span>Gjithsej</span><b>3.10€</b></div>
+              </div>
+              <div class="float float-day" aria-hidden="true">
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19v-7M10 19V6M15 19v-5M20 19V9"/></svg></span><b>Shitjet e sotme</b></div>
+                <p class="float-big"><span data-count="1284.60" data-decimals="2" data-delay="1100">1,284.60</span>€</p>
+                <div class="float-split"><i style="--w: 62%"></i><i style="--w: 31%"></i><i style="--w: 7%"></i></div>
+                <div class="float-legend"><span>Kesh</span><span>Kartelë</span><span>Vauçer</span></div>
+              </div>
+              <div class="float float-vat" aria-hidden="true">
+                <div class="float-head"><span class="float-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><b>Sipas normës së TVSH-së</b></div>
+                <div class="float-row"><span>TVSH 18%</span><b>1,032.40€</b></div>
+                <div class="float-row"><span>TVSH 8%</span><b>252.20€</b></div>
+              </div>
+            </div>
+            <figcaption class="hero-note">Mjedisi Demo · të dhëna prove</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section pos-notice">
         <div class="container">
-          <p class="notice-band" data-reveal><strong>Ende i pacertifikuar.</strong> Chronos POS ende nuk është certifikuar nga Administrata Tatimore e Kosovës, prandaj nuk duhet të përdoret për të lëshuar kuponë fiskalë për shitje reale. Demo nuk lëshon asnjë të tillë: asgjë nuk i shkon ATK-së, dhe çdo kupon që shtyp shënohet pa vlerë fiskale.</p>
+          <div class="notice-band" data-reveal><span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.8 2.8 19.6h18.4L12 3.8z"/><path d="M12 10v4.2M12 17.1v.1"/></svg></span><p><strong>Ende i pacertifikuar.</strong> Chronos POS ende nuk është certifikuar nga Administrata Tatimore e Kosovës, prandaj nuk duhet të përdoret për të lëshuar kuponë fiskalë për shitje reale. Demo nuk lëshon asnjë të tillë: asgjë nuk i shkon ATK-së, dhe çdo kupon që shtyp shënohet pa vlerë fiskale.</p></div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="flow" style="padding-top: 0">
+        <div class="container">
+          <div class="head head-center" data-reveal>
+            <p class="label">Nga shitja te deklarata</p>
+            <h2>Një shitje, deri te deklaratat.</h2>
+            <p>Çka ndodh në banak vazhdon te librat dhe te formularët e muajit, në të njëjtin program.</p>
+          </div>
+          <div class="flow" data-flow data-reveal style="--i: 1">
+            <div class="flow-inner">
+              <span class="flow-track" aria-hidden="true"><span class="flow-beam"></span></span>
+              <ol class="flow-steps">
+                <li class="flow-step" style="--n: 0"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.3 10.5h10.3L20 7.5H6.3"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></span><span class="flow-num" aria-hidden="true">01</span><h3>Shitja</h3><p>Kërko, prek dhe paguaj, me kesh, kartelë ose vauçer.</p></li>
+                <li class="flow-step" style="--n: 1"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg></span><span class="flow-num" aria-hidden="true">02</span><h3>Kuponi fiskal</h3><p>I nënshkruar, me kodin QR, sipas mostrave të ATK-së.</p></li>
+                <li class="flow-step" style="--n: 2"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg></span><span class="flow-num" aria-hidden="true">03</span><h3>Kontabiliteti</h3><p>Librat e shitjes dhe të blerjes, si në EDI.</p></li>
+                <li class="flow-step" style="--n: 3"><span class="flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5"/><path d="M9.8 14.6l2 2 3.6-3.6"/></svg></span><span class="flow-num" aria-hidden="true">04</span><h3>Deklaratat tatimore</h3><p>TV, QS, QL, WM, CM, WR e CD, të përgatitura që t’i kontrollosh dhe t’i dorëzosh në EDI.</p></li>
+              </ol>
+            </div>
+          </div>
+          <p class="flow-note" data-reveal>Librat vijnë me Chronos Plus, deklaratat me Chronos Pro.</p>
+          <ul class="stats" data-reveal data-stagger>
+            <li class="stat"><b><span class="sr-only">36</span><span aria-hidden="true"><span data-count="36">36</span></span></b><span>funksione në Chronos Pro</span></li>
+            <li class="stat"><b><span class="sr-only">7</span><span aria-hidden="true"><span data-count="7">7</span></span></b><span>formularë tatimorë të përgatitur</span></li>
+            <li class="stat"><b><span class="sr-only">11</span><span aria-hidden="true"><span data-count="11">11</span></span></b><span>rregulla të kontrollit të brendshëm</span></li>
+            <li class="stat"><b><span class="sr-only">48 orë</span><span aria-hidden="true"><span data-count="48">48</span><small>orë</small></span></b><span>shitje pa internet, siç e lejon ligji</span></li>
+          </ul>
         </div>
       </section>
 
@@ -106,57 +173,105 @@
             <h2>Nga shitja e parë te deklaratat e muajit.</h2>
             <p>Çka përfshihet varet nga paketa: <a class="inline-link" href="#prices">shiko çmimet</a>.</p>
           </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">Në banak</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11l5.2 1.3a2 2 0 0 1 1.5 2.3l-.7 4A2.5 2.5 0 0 1 15.5 21H12a4 4 0 0 1-3-1.4L5.5 15.5a1.5 1.5 0 0 1 2.2-2L9 15"/></svg><h3>Shitje me disa prekje</h3><p>Kërko sipas emrit ose barkodit, prek artikullin, zgjidh si u pagua. Më të shiturat janë një prekje larg, dhe në Windows arka punohet edhe me tastierë.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h3>Zbritje dhe pagesë e ndarë</h3><p>Zbritje për një artikull ose për gjithë shportën, dhe një shitje e paguar bashkë me kesh, kartelë e vauçer, me kusurin të llogaritur.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 20h12M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0L5 8zM19 8l-2.5 6a3 3 0 0 0 5 0L19 8z"/></svg><h3>Sasitë siç i mat ti</h3><p>Kilogramë e gramë, litra e mililitra, orë e minuta, secila në njësinë e artikullit.</p></div>
-            </div>
-          </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">Kuponi fiskal</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg><h3>Sipas mostrave të ATK-së</h3><p>I nënshkruar, me kodin QR dhe numrat e tij. Shtypet në rrotull 58 dhe 80 mm, gjithmonë në shqip, dhe shtypja e dytë shënohet si kopje.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M4 12h10a6 6 0 0 1 0 12"/></svg><h3>Kthimet dhe anulimet</h3><p>Asgjë nuk ndryshohet e nuk fshihet. Gabimi korrigjohet me kupon të ri që i referohet të parit, dhe kuponët nga blloku mund të regjistrohen më vonë.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M19 13a10 10 0 0 0-3-2.1"/><circle cx="12" cy="20" r=".8"/></svg><h3>I ndërtuar të shesë pa internet</h3><p>Kuponët lëshohen dhe shënohen offline, pastaj dërgohen vetë dhe me radhë kur të kthehet lidhja. Ligji lejon 48 orë, dhe programi paralajmëron ndërsa kalojnë.</p></div>
-            </div>
-          </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">Librat</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><h3>Librat dhe deklaratat</h3><p>Librat e shitjes dhe të blerjes, dhe formularët TV, QS, QL, WM, CM, WR e CD si ata të ATK-së, me kujtesë para çdo afati. Ti i kontrollon dhe i dorëzon në EDI.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><h3>Blerjet sipas llojit</h3><p>Investime, shpenzime dhe mallra, rresht për rresht. Mallrat hyjnë në stok, investimet në regjistrin e aseteve, dhe shpenzimet në kutinë e duhur të formularit CD.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3.5 3.5 0 0 1 0 6.5M18 15a6 6 0 0 1 3 5"/></svg><h3>Pagat</h3><p>Punonjësit, paga e muajit dhe fletëpagesat në Excel, që ushqejnë WM dhe CM. Shkruaj pagën neto nëse atë e di, dhe bruto llogaritet vetë.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Fatura për bizneset</h3><p>Fatura me nota krediti dhe debiti, në A4 ose në rrotull 80 mm, me ose pa numër TVSH, dhe regjistër klientësh.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4V8z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg><h3>Stoku dhe asetet</h3><p>Kostot, pranimet dhe numërimet, lista e stokut në Excel, dhe regjistri i aseteve me zhvlerësim për librat dhe për tatim.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h8l8 8-8 8-8-8V4z"/><circle cx="8.5" cy="8.5" r="1.2"/></svg><h3>Norma e TVSH-së</h3><p>Lista e ligjit për çfarë ka 8% kudo ku zgjidhet norma, dhe një rekomandim kur një emër, si fatura e rrymës, duket në të. Normën nuk e ndryshon kurrë vetë.</p></div>
-            </div>
-          </div>
-          <div class="feature-group" data-reveal>
-            <h3 class="label">Kontrolli dhe siguria</h3>
-            <div class="features">
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l3 3"/></svg><h3>Kush çfarë mund të bëjë</h3><p>Pronar, kontabilist dhe arkëtar, secili me PIN-in dhe lejet e veta. Arka e lënë pa përdorim e nxjerr vetë operatorin, dhe çdo veprim regjistrohet.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4"/></svg><h3>Kontrollet e brendshme</h3><p>Njëmbëdhjetë rregulla ngrenë alarme për anulime, zbritje, stok dhe ndërprerje në shitje, me raport mujor.</p></div>
-            <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h3>Të dhënat mbeten te ti</h3><p>Regjistrat shifrohen në kompjuterin tënd, dhe asnjë server i yni nuk i mban. Kopja rezervë bëhet çdo ditë dhe në mbyllje, në dosjen që zgjedh, me fjalëkalimin tënd.</p></div>
-            </div>
+          <div class="bento">
+            <article class="cat cat-wide" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 6.5h8v3.5H8z"/><path d="M8.6 14h.01M12 14h.01M15.4 14h.01M8.6 17.5h.01M12 17.5h.01M15.4 17.5h.01"/></svg></span><h3>Pika e shitjes</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11l5.2 1.3a2 2 0 0 1 1.5 2.3l-.7 4A2.5 2.5 0 0 1 15.5 21H12a4 4 0 0 1-3-1.4L5.5 15.5a1.5 1.5 0 0 1 2.2-2L9 15"/></svg><h4>Shitje me disa prekje</h4><p>Kërko sipas emrit ose barkodit, prek artikullin, zgjidh si u pagua. Më të shiturat janë një prekje larg, dhe në Windows arka punohet edhe me tastierë.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h4>Zbritje dhe pagesë e ndarë</h4><p>Zbritje për një artikull ose për gjithë shportën, dhe një shitje e paguar bashkë me kesh, kartelë e vauçer, me kusurin të llogaritur.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 20h12M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0L5 8zM19 8l-2.5 6a3 3 0 0 0 5 0L19 8z"/></svg><h4>Sasitë siç i mat ti</h4><p>Kilogramë e gramë, litra e mililitra, orë e minuta, secila në njësinë e artikullit.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-wide" data-reveal data-anim data-spot style="--i: 1">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2.5v2.5H14zM17.5 17.5H20V20h-2.5zM20 14v.5M14 20h.5"/></svg></span><h3>Fiskalizimi</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg><h4>Sipas mostrave të ATK-së</h4><p>I nënshkruar, me kodin QR dhe numrat e tij. Shtypet në rrotull 58 dhe 80 mm, gjithmonë në shqip, dhe shtypja e dytë shënohet si kopje.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M4 12h10a6 6 0 0 1 0 12"/></svg><h4>Kthimet dhe anulimet</h4><p>Asgjë nuk ndryshohet e nuk fshihet. Gabimi korrigjohet me kupon të ri që i referohet të parit, dhe kuponët nga blloku mund të regjistrohen më vonë.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M19 13a10 10 0 0 0-3-2.1"/><circle cx="12" cy="20" r=".8"/></svg><h4>I ndërtuar të shesë pa internet</h4><p>Kuponët lëshohen dhe shënohen offline, pastaj dërgohen vetë dhe me radhë kur të kthehet lidhja. Ligji lejon 48 orë, dhe programi paralajmëron ndërsa kalojnë.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-full" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M9 9v10.5M14.5 9v10.5"/></svg></span><h3>Kontabiliteti</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><h4>Librat dhe deklaratat</h4><p>Librat e shitjes dhe të blerjes, dhe formularët TV, QS, QL, WM, CM, WR e CD si ata të ATK-së, me kujtesë para çdo afati. Ti i kontrollon dhe i dorëzon në EDI.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h4>Fatura për bizneset</h4><p>Fatura me nota krediti dhe debiti, në A4 ose në rrotull 80 mm, me ose pa numër TVSH, dhe regjistër klientësh.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h8l8 8-8 8-8-8V4z"/><circle cx="8.5" cy="8.5" r="1.2"/></svg><h4>Norma e TVSH-së</h4><p>Lista e ligjit për çfarë ka 8% kudo ku zgjidhet norma, dhe një rekomandim kur një emër, si fatura e rrymës, duket në të. Normën nuk e ndryshon kurrë vetë.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-third cat-buy" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5 12 4l8.5 4.5v7L12 20l-8.5-4.5z"/><path d="M3.5 8.5 12 13l8.5-4.5M12 13v7M7.8 6.3l8.4 4.5"/></svg></span><h3>Blerjet dhe stoku</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><h4>Blerjet sipas llojit</h4><p>Investime, shpenzime dhe mallra, rresht për rresht. Mallrat hyjnë në stok, investimet në regjistrin e aseteve, dhe shpenzimet në kutinë e duhur të formularit CD.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4V8z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg><h4>Stoku</h4><p>Kostot, pranimet dhe numërimet, dhe lista e stokut në Excel.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-third" data-reveal data-anim data-spot style="--i: 1">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v.01M18 14.5v.01"/></svg></span><h3>Pagat</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3.5 3.5 0 0 1 0 6.5M18 15a6 6 0 0 1 3 5"/></svg><h4>Pagat</h4><p>Punonjësit, paga e muajit dhe fletëpagesat në Excel, që ushqejnë WM dhe CM. Shkruaj pagën neto nëse atë e di, dhe bruto llogaritet vetë.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3z"/><path d="M14 3v5h5"/><path d="M10 17l5-5"/><circle cx="10.4" cy="12.4" r=".7"/><circle cx="14.6" cy="16.6" r=".7"/></svg><h4>Tatimi në burim</h4><p>Tatimi në burim dhe tabelat e formularit CD, bashkë me pagat.</p></div>
+              </div>
+            </article>
+            <article class="cat cat-third" data-reveal data-anim data-spot style="--i: 2">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9.5 21v-5h5v5M9 11.5h.01M15 11.5h.01"/></svg></span><h3>Asetet fikse</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9.5 21v-5h5v5M9 11.5h.01M15 11.5h.01"/></svg><h4>Regjistri i aseteve</h4><p>Zhvlerësimi për librat dhe për tatim, si dhe shitja dhe çregjistrimi i asetit. Investimet e regjistruara si blerje hyjnë drejt aty.</p></div>
+              </div>
+              <div class="dep" aria-hidden="true"><i style="--h: 100%; --j: 0"></i><i style="--h: 82%; --j: 1"></i><i style="--h: 64%; --j: 2"></i><i style="--h: 46%; --j: 3"></i><i style="--h: 28%; --j: 4"></i></div>
+            </article>
+            <article class="cat cat-full" data-reveal data-anim data-spot style="--i: 0">
+              <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><h3>Siguria dhe kontrolli i brendshëm</h3></div>
+              <div class="cat-items">
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l3 3"/></svg><h4>Kush çfarë mund të bëjë</h4><p>Pronar, kontabilist dhe arkëtar, secili me PIN-in dhe lejet e veta. Arka e lënë pa përdorim e nxjerr vetë operatorin, dhe çdo veprim regjistrohet.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4"/></svg><h4>Kontrollet e brendshme</h4><p>Njëmbëdhjetë rregulla ngrenë alarme për anulime, zbritje, stok dhe ndërprerje në shitje, me raport mujor.</p></div>
+                <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h4>Të dhënat mbeten te ti</h4><p>Regjistrat shifrohen në kompjuterin tënd, dhe asnjë server i yni nuk i mban. Kopja rezervë bëhet çdo ditë dhe në mbyllje, në dosjen që zgjedh, me fjalëkalimin tënd.</p></div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section" id="screens" style="padding-top: 0">
         <div class="container">
-          <div class="head" data-reveal>
+          <div class="head head-center" data-reveal>
             <p class="label">Programi</p>
             <h2>Çfarë do të shohësh.</h2>
           </div>
-          <div class="shots" data-reveal>
-            <figure class="shot"><img src="./assets/pos/sq-sale.png" width="1280" height="800" loading="lazy" alt="Shitja: kërko, prek dhe paguaj." /><figcaption>Shitja: kërko, prek dhe paguaj.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/sq-coupon.png" width="1280" height="800" loading="lazy" alt="Kuponi, i shënuar si demo. Në kuponin real ai rresht s’është." /><figcaption>Kuponi, i shënuar si demo. Në kuponin real ai rresht s’është.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/sq-closing.png" width="1280" height="800" loading="lazy" alt="Mbyllja e muajit, hap pas hapi." /><figcaption>Mbyllja e muajit, hap pas hapi.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/sq-purchases.png" width="1280" height="800" loading="lazy" alt="Blerjet, të ndara në investime, shpenzime dhe mallra." /><figcaption>Blerjet, të ndara në investime, shpenzime dhe mallra.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/sq-payroll.png" width="1280" height="800" loading="lazy" alt="Pagat e muajit, nga drafti te pagesa." /><figcaption>Pagat e muajit, nga drafti te pagesa.</figcaption></figure>
-            <figure class="shot"><img src="./assets/pos/sq-license.png" width="1280" height="800" loading="lazy" alt="Licenca: kodi i arkës dhe fusha për kodin tënd." /><figcaption>Licenca: kodi i arkës dhe fusha për kodin tënd.</figcaption></figure>
+          <div class="showcase" data-showcase data-reveal>
+            <div class="showcase-bar"><div class="showcase-tabs" role="tablist" aria-label="Pjesët e programit"><span class="tab-thumb" aria-hidden="true"></span><button type="button" role="tab" id="tab-sales" aria-controls="panel-sales" aria-selected="true" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 6.5h8v3.5H8z"/><path d="M8.6 14h.01M12 14h.01M15.4 14h.01M8.6 17.5h.01M12 17.5h.01M15.4 17.5h.01"/></svg><span>POS dhe shitjet</span></button><button type="button" role="tab" id="tab-books" aria-controls="panel-books" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M9 9v10.5M14.5 9v10.5"/></svg><span>Kontabiliteti dhe blerjet</span></button><button type="button" role="tab" id="tab-payroll" aria-controls="panel-payroll" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v.01M18 14.5v.01"/></svg><span>Pagat dhe asetet fikse</span></button></div></div>
+            <div class="showcase-panel is-active" role="tabpanel" id="panel-sales" aria-labelledby="tab-sales">
+              <div class="showcase-copy">
+                <h3>Shit, pastaj shtyp kuponin.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Kërko sipas emrit ose barkodit, me më të shiturat një prekje larg.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Kesh, kartelë dhe vauçer bashkë në një shitje.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Kuponi me kodin QR, në rrotull 58 ose 80 mm.</span></li></ul>
+                <a class="link" href="#prices">Krahaso paketat<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/sq-sale.png" width="1280" height="800" loading="lazy" alt="Shitja: kërko, prek dhe paguaj." /></div><figcaption>Shitja: kërko, prek dhe paguaj.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/sq-coupon.png" width="1280" height="800" loading="lazy" alt="Kuponi, i shënuar si demo. Në kuponin real ai rresht s’është." /></div><figcaption>Kuponi, i shënuar si demo. Në kuponin real ai rresht s’është.</figcaption></figure></div>
+                <div class="screen-picker" role="group" aria-label="Pamjet"><button type="button" aria-pressed="true" aria-label="Shitja: kërko, prek dhe paguaj."><img src="./assets/pos/sq-sale.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="Kuponi, i shënuar si demo. Në kuponin real ai rresht s’është."><img src="./assets/pos/sq-coupon.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
+              </div>
+            </div>
+            <div class="showcase-panel" role="tabpanel" id="panel-books" aria-labelledby="tab-books">
+              <div class="showcase-copy">
+                <h3>Mbylle muajin nga i njëjti vend.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Gjashtë hapa, nga kuponët e dërguar te formularët e dorëzuar.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Blerjet të ndara në investime, shpenzime dhe mallra.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Librat të ruajtur si Excel-i i ATK-së, gati për EDI.</span></li></ul>
+                <a class="link" href="#prices">Krahaso paketat<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/sq-closing.png" width="1280" height="800" loading="lazy" alt="Mbyllja e muajit, hap pas hapi." /></div><figcaption>Mbyllja e muajit, hap pas hapi.</figcaption></figure><figure class="shot"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/sq-purchases.png" width="1280" height="800" loading="lazy" alt="Blerjet, të ndara në investime, shpenzime dhe mallra." /></div><figcaption>Blerjet, të ndara në investime, shpenzime dhe mallra.</figcaption></figure></div>
+                <div class="screen-picker" role="group" aria-label="Pamjet"><button type="button" aria-pressed="true" aria-label="Mbyllja e muajit, hap pas hapi."><img src="./assets/pos/sq-closing.png" width="1280" height="800" alt="" loading="lazy" /></button><button type="button" aria-pressed="false" aria-label="Blerjet, të ndara në investime, shpenzime dhe mallra."><img src="./assets/pos/sq-purchases.png" width="1280" height="800" alt="" loading="lazy" /></button></div>
+              </div>
+            </div>
+            <div class="showcase-panel" role="tabpanel" id="panel-payroll" aria-labelledby="tab-payroll">
+              <div class="showcase-copy">
+                <h3>Paguaj punonjësit dhe mbaje regjistrin.</h3>
+                <ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Shkruaj pagën neto dhe bruto llogaritet vetë.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Fletëpagesat në Excel, që ushqejnë WM dhe CM.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Regjistri i aseteve me zhvlerësim për librat dhe për tatim.</span></li></ul>
+                <p class="showcase-note">Pagat dhe regjistri i aseteve vijnë me Chronos Pro.</p>
+                <a class="link" href="#prices">Krahaso paketat<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <div class="showcase-media">
+                <div class="screens"><figure class="shot is-active"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/sq-payroll.png" width="1280" height="800" loading="lazy" alt="Pagat e muajit, nga drafti te pagesa." /></div><figcaption>Pagat e muajit, nga drafti te pagesa.</figcaption></figure></div>
+              </div>
+            </div>
           </div>
           <p class="caption">Pamje nga programi për Windows, në mjedisin Demo. Biznesi, emrat dhe shifrat janë të dhëna prove.</p>
         </div>
@@ -168,7 +283,7 @@
             <p class="label">Si përdoret</p>
             <h2>Nga instalimi te mbyllja e muajit.</h2>
           </div>
-          <div class="steps" data-reveal>
+          <div class="steps" data-reveal data-stagger>
             <div class="step"><h3>Instaloje</h3><p>Shkarko instaluesin dhe hape. Windows-i mund të paralajmërojë, sepse ende s’është i nënshkruar: zgjidh More info, pastaj Run anyway.</p></div>
             <div class="step"><h3>Konfiguroje një herë</h3><p>Pronari përgjigjet një herë: gjuha, biznesi, tatimet, arka dhe PIN-i i vet. Fillon në Demo, ku asgjë nuk i shkon ATK-së.</p></div>
             <div class="step"><h3>Shto artikujt</h3><p>Emri, çmimi me TVSH, norma e TVSH-së, njësia dhe kategoria nga tabelat e ATK-së. Programi të tregon ku ligji jep 8%.</p></div>
@@ -181,12 +296,15 @@
 
       <section class="section" id="licence" style="padding-top: 0">
         <div class="container">
-          <div class="head" data-reveal>
+          <div class="licence-top">
+            <div class="head" data-reveal>
             <p class="label">Licenca</p>
             <h2>Një licencë për çdo arkë.</h2>
             <p>Licencat do të lëshohen pasi Chronos POS të certifikohet. Ja si do të funksionojnë.</p>
           </div>
-          <div class="features" data-reveal>
+            <figure class="shot licence-shot" data-reveal style="--i: 1"><div class="app-window"><div class="window-bar" aria-hidden="true"><span class="window-title">Chronos POS</span><span class="window-controls"><i></i><i></i><i></i></span></div><img src="./assets/pos/sq-license.png" width="1280" height="800" loading="lazy" alt="Licenca: kodi i arkës dhe fusha për kodin tënd." /></div><figcaption>Licenca: kodi i arkës dhe fusha për kodin tënd.</figcaption></figure>
+          </div>
+          <div class="features" data-reveal data-stagger>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><h3>Provoje së pari</h3><p>Demo dhe Testimi punojnë 30 ditë në një kompjuter pa licencë. Produksioni e kërkon që nga kuponi i parë.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 3 10l7 3 3 7 8-17z"/><path d="M10 13l5-5"/></svg><h3>Si e merr arka</h3><p>Pronari dërgon kodin e arkës dhe NUI-n e biznesit, që të dyja te Cilësimet, Konfigurimi, Licenca, dhe aty e ngjit kodin që merr. Asnjë server i yni nuk përfshihet.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Për sa kohë</h3><p>Një muaj, gjashtë muaj ose një vit. Vazhdimi nis nga skadimi i vjetër, që asnjë ditë të mos fitohet e të mos humbet.</p></div>
@@ -208,14 +326,17 @@
             <input class="term-radio" type="radio" name="term" id="term-1m" />
             <input class="term-radio" type="radio" name="term" id="term-6m" />
             <input class="term-radio" type="radio" name="term" id="term-1y" checked />
-            <div class="term-switch"><label for="term-1m">Mujore</label><label for="term-6m">6 muaj</label><label for="term-1y">1 vit</label></div>
-            <div class="plans">
-            <article class="plan">
-              <h3>Chronos Start</h3>
+            <div class="term-switch"><span class="term-thumb" aria-hidden="true"></span><label for="term-1m">Mujore</label><label for="term-6m">6 muaj</label><label for="term-1y">1 vit</label></div>
+            <p class="term-save">Me një vit kursen deri €51 krahasuar me pagesën mujore.</p>
+            <div class="plans" data-reveal data-stagger>
+            <article class="plan" data-spot>
+              <div class="plan-top"><h3>Chronos Start</h3><span class="plan-tier" data-tier="1" aria-hidden="true"><i></i><i></i><i></i></span></div>
               <p class="plan-for">Arka dhe faturat</p>
-              <div class="plan-price t-1m"><p><b>€9</b><span>/ muaj</span></p><p class="was"><s>€15</s><em>−40%</em></p><p class="plan-note">Paguhet muaj për muaj</p></div>
-              <div class="plan-price t-6m"><p><b>€50</b><span>/ 6 muaj</span></p><p class="was">&nbsp;</p><p class="plan-note">Paguhet një herë për gjashtë muaj</p></div>
-              <div class="plan-price t-1y"><p><b>€89</b><span>/ vit</span></p><p class="was"><s>€150</s><em>−41%</em></p><p class="plan-note">Kursen €19 krahasuar me pagesën mujore</p></div>
+              <div class="plan-prices">
+                <div class="plan-price t-1m"><p><b>€9</b><span>/ muaj</span></p><p class="was"><s>€15</s><em>−40%</em></p><p class="plan-note">Paguhet muaj për muaj</p></div>
+                <div class="plan-price t-6m"><p><b>€50</b><span>/ 6 muaj</span></p><p class="was">&nbsp;</p><p class="plan-note">Paguhet një herë për gjashtë muaj</p></div>
+                <div class="plan-price t-1y"><p><b>€89</b><span>/ vit</span></p><p class="was"><s>€150</s><em>−41%</em></p><p class="plan-note">Kursen €19 krahasuar me pagesën mujore</p></div>
+              </div>
               <ul class="points">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Kuponi fiskal, kthimet dhe anulimet</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Puna pa internet</span></li>
@@ -225,12 +346,14 @@
               </ul>
               <a class="btn" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Provo demon</a>
             </article>
-            <article class="plan">
-              <h3>Chronos Plus</h3>
+            <article class="plan" data-spot>
+              <div class="plan-top"><h3>Chronos Plus</h3><span class="plan-tier" data-tier="2" aria-hidden="true"><i></i><i></i><i></i></span></div>
               <p class="plan-for">Me blerjet, stokun dhe librat</p>
-              <div class="plan-price t-1m"><p><b>€15</b><span>/ muaj</span></p><p class="was"><s>€25</s><em>−40%</em></p><p class="plan-note">Paguhet muaj për muaj</p></div>
-              <div class="plan-price t-6m"><p><b>€85</b><span>/ 6 muaj</span></p><p class="was">&nbsp;</p><p class="plan-note">Paguhet një herë për gjashtë muaj</p></div>
-              <div class="plan-price t-1y"><p><b>€149</b><span>/ vit</span></p><p class="was"><s>€250</s><em>−40%</em></p><p class="plan-note">Kursen €31 krahasuar me pagesën mujore</p></div>
+              <div class="plan-prices">
+                <div class="plan-price t-1m"><p><b>€15</b><span>/ muaj</span></p><p class="was"><s>€25</s><em>−40%</em></p><p class="plan-note">Paguhet muaj për muaj</p></div>
+                <div class="plan-price t-6m"><p><b>€85</b><span>/ 6 muaj</span></p><p class="was">&nbsp;</p><p class="plan-note">Paguhet një herë për gjashtë muaj</p></div>
+                <div class="plan-price t-1y"><p><b>€149</b><span>/ vit</span></p><p class="was"><s>€250</s><em>−40%</em></p><p class="plan-note">Kursen €31 krahasuar me pagesën mujore</p></div>
+              </div>
               <ul class="points">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Gjithçka nga Start</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Blerjet dhe stoku</span></li>
@@ -240,12 +363,14 @@
               </ul>
               <a class="btn" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Provo demon</a>
             </article>
-            <article class="plan">
-              <h3>Chronos Pro</h3>
+            <article class="plan plan-pro" data-spot>
+              <div class="plan-top"><h3>Chronos Pro</h3><span class="plan-badge">Më e plota</span><span class="plan-tier" data-tier="3" aria-hidden="true"><i></i><i></i><i></i></span></div>
               <p class="plan-for">Me deklaratat, pagat dhe asetet</p>
-              <div class="plan-price t-1m"><p><b>€25</b><span>/ muaj</span></p><p class="was"><s>€39</s><em>−36%</em></p><p class="plan-note">Paguhet muaj për muaj</p></div>
-              <div class="plan-price t-6m"><p><b>€140</b><span>/ 6 muaj</span></p><p class="was">&nbsp;</p><p class="plan-note">Paguhet një herë për gjashtë muaj</p></div>
-              <div class="plan-price t-1y"><p><b>€249</b><span>/ vit</span></p><p class="was"><s>€390</s><em>−36%</em></p><p class="plan-note">Kursen €51 krahasuar me pagesën mujore</p></div>
+              <div class="plan-prices">
+                <div class="plan-price t-1m"><p><b>€25</b><span>/ muaj</span></p><p class="was"><s>€39</s><em>−36%</em></p><p class="plan-note">Paguhet muaj për muaj</p></div>
+                <div class="plan-price t-6m"><p><b>€140</b><span>/ 6 muaj</span></p><p class="was">&nbsp;</p><p class="plan-note">Paguhet një herë për gjashtë muaj</p></div>
+                <div class="plan-price t-1y"><p><b>€249</b><span>/ vit</span></p><p class="was"><s>€390</s><em>−36%</em></p><p class="plan-note">Kursen €51 krahasuar me pagesën mujore</p></div>
+              </div>
               <ul class="points">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Gjithçka nga Plus</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Formularët TV, QS, QL, CD, WM, CM dhe WR</span></li>
@@ -253,7 +378,7 @@
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Pagat dhe tatimi në burim</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7.5"/></svg><span>Regjistri i aseteve dhe kontrolli i brendshëm</span></li>
               </ul>
-              <a class="btn" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Provo demon</a>
+              <a class="btn btn-primary" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Provo demon</a>
             </article>
             </div>
           </div>
@@ -313,7 +438,7 @@
             </div>
           </details>
           <h3 class="addons-title" data-reveal>Shtesat</h3>
-          <div class="addons" data-reveal>
+          <div class="addons" data-reveal data-stagger>
             <div class="addon"><h4>Instalimi dhe regjistrimi në ATK</h4><p class="addon-price"><b>€40</b><span>një herë për arkë</span></p><p>Falas me licencë vjetore në vitin e parë.</p></div>
             <div class="addon"><h4>Arka e dytë e të njëjtit biznes</h4><p class="addon-price"><b>€5</b><span>në muaj në vitin e parë</span></p><p>Në çdo paketë. Më vonë, 50% e çmimit të paketës.</p></div>
             <div class="addon"><h4>Chronos Pro me shërbimin e deklaratave</h4><p class="addon-price"><b>€60</b><span>në muaj në vitin e parë</span></p><p>Më vonë €80 deri €150 në muaj, sipas madhësisë së biznesit.</p></div>
@@ -338,7 +463,7 @@
             <p class="label">Çfarë i duhet</p>
             <h2>Një kompjuter me Windows dhe, për kuponin, një printer.</h2>
           </div>
-          <div class="features features-2" data-reveal>
+          <div class="features features-2" data-reveal data-stagger>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><h3>Windows 64-bit</h3><p>I provuar në Windows 11. Android-i dhe iOS vijnë së shpejti dhe ende s’janë në dispozicion.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3>Internet</h3><p>Për t’i raportuar kuponët te ATK-ja. Pa të vazhdon të shesë, brenda 48 orëve që lejon ligji.</p></div>
             <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V3h10v6"/><rect x="4" y="9" width="16" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg><h3>Një printer</h3><p>Printer termik për rrotull 58 ose 80 mm me drajver Windows-i. Faturat shtypen edhe në A4, dhe kuponët ruhen edhe si PDF.</p></div>
@@ -353,7 +478,7 @@
             <p class="label">Pyetje</p>
             <h2>Çfarë pyesin njerëzit së pari.</h2>
           </div>
-          <div class="faq" data-reveal>
+          <div class="faq" data-reveal data-stagger>
             <details class="qa"><summary>A është i certifikuar Chronos POS?</summary><p>Jo ende. Së pari duhet të kalojë aplikimin te Administrata Tatimore e Kosovës, me testim kundrejt shërbimit të saj. Deri atëherë nuk duhet të përdoret për shitje reale.</p></details>
             <details class="qa"><summary>Çfarë mund të bëj me demon?</summary><p>Ta provosh gjithçka me të dhëna prove për 30 ditë: shitjet, kuponët, librat dhe pagat. Asgjë nuk i shkon ATK-së dhe asnjë kupon s’ka vlerë fiskale.</p></details>
             <details class="qa"><summary>Ku ruhen të dhënat e mia?</summary><p>Në kompjuterin tënd, të shifruara. Kopjet rezervë shkojnë në dosjen që zgjedh, me fjalëkalimin tënd. Ne nuk mbajmë asgjë prej tyre.</p></details>
@@ -372,7 +497,7 @@
             <h2>Provoje në kompjuterin tënd.</h2>
             <p>Demo nuk kërkon licencë, dhe asgjë që shkruan nuk del nga kompjuteri yt.</p>
             <div class="actions">
-              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Shkarko demon për Windows<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+              <a class="btn btn-primary btn-lg" href="https://download.chronosapplications.com/ChronosPOS-Setup.exe">Shkarko demon për Windows<svg class="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
               <a class="btn btn-lg" href="./pos-terms.sq.html">Kushtet e përdorimit</a>
             </div>
           </div>
